@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Herramientas LAN Pawanka</title>
+<title>Canasto de Herramientas LAN Pawanka</title>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <style>
@@ -20,12 +20,12 @@
   .hint{text-align:center;font-size:12px;color:#777;margin:-6px 0 12px}
   .sheet{width:860px;margin:0 auto;background:#fff;border:1px solid #e2dccf;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);overflow:hidden}
   .triangles{height:12px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'><polygon points='0,12 10,0 20,12' fill='%23d94a38'/><polygon points='20,12 30,0 40,12' fill='%23f2a33c'/><polygon points='40,12 50,0 60,12' fill='%237ab648'/><polygon points='60,12 70,0 80,12' fill='%232e6db4'/><polygon points='80,12 90,0 100,12' fill='%23a2499a'/><polygon points='100,12 110,0 120,12' fill='%23e9c53a'/></svg>") repeat-x center}
-  /* ---------- LOGO JUNTO A LOS TÍTULOS ---------- */
   .title-row{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
   .title-logo{width:62px;height:auto;object-fit:contain}
-  /* ---------- MENÚ PRINCIPAL ---------- */
+  /* ---------- MENÚ ---------- */
   .menu{max-width:760px;margin:40px auto;text-align:center}
-  .menu-logo svg{width:110px;height:110px}
+  .menu-logo{display:flex;justify-content:center;margin-bottom:16px}
+  .menu-logo-img{width:170px;height:auto;object-fit:contain;display:block}
   .menu-title{font-family:'Oswald';color:#14532d;font-size:34px;letter-spacing:1px;margin:10px 0 4px;text-transform:uppercase}
   .menu-sub{color:#666;font-size:14px;margin:0 0 28px}
   .menu-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -129,9 +129,68 @@
   #view-t1 .nstrip{background:#8c2f26;color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 14px;font-family:'Oswald';letter-spacing:1.5px;font-size:13px}
   #view-t1 .nstrip .d{color:#e9a63a}
   #view-t1 .nstrip .lanw{font-family:'Oswald';font-weight:700;color:#fff;letter-spacing:1px;font-size:13px;text-align:right;line-height:1.1}
+  /* ---------- PORTADA Y CONTENEDOR ---------- */
+  .home{max-width:1250px;margin:0 auto;background:#f8f2e4;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.12);overflow:hidden;padding:26px 34px 0;position:relative}
+  .home-top{display:grid;grid-template-columns:1fr 470px;gap:10px;align-items:start}
+  .home-logo{width:120px;height:auto;display:block;margin:0 0 10px 4px}
+  .home-titles{text-align:center}
+  .home-kicker{font-family:'Oswald';color:#5b3a1e;font-size:28px;letter-spacing:1px;margin:0}
+  .home-title{font-family:'Oswald';color:#2e5e2a;font-size:62px;letter-spacing:2px;margin:0 0 8px;font-weight:700}
+  .home-div{height:16px;max-width:560px;margin:0 auto;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='16' viewBox='0 0 160 16'><polygon points='10,3 16,8 10,13 4,8' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><circle cx='26' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='42,3 48,8 42,13 36,8' fill='none' stroke='%23d95f18' stroke-width='1.6'/><circle cx='58' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='74,3 80,8 74,13 68,8' fill='none' stroke='%237d3f98' stroke-width='1.6'/><circle cx='90' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='106,3 112,8 106,13 100,8' fill='none' stroke='%231f6f8f' stroke-width='1.6'/><circle cx='122' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='138,3 144,8 138,13 132,8' fill='none' stroke='%23d9a03a' stroke-width='1.6'/><circle cx='154' cy='8' r='1.6' fill='%235b3a1e'/></svg>") repeat-x center}
+  .home-intro{font-size:15px;color:#4a4a4a;text-align:center;max-width:640px;margin:20px auto 24px;line-height:1.55}
+  .home-feats{display:grid;grid-template-columns:repeat(4,1fr);max-width:920px;margin:0 auto 26px}
+  .feat{padding:0 14px;text-align:center}
+  .feat + .feat{border-left:1px dashed #b7a88c}
+  .feat-ic{width:56px;height:56px;border:2px solid var(--fc);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;background:#fffdf6}
+  .feat-ic svg{width:30px;height:30px}
+  .feat p{font-size:12.5px;color:#4a4a4a;margin:0;line-height:1.5}
+  .home-banner{background:#e6eed6;border:1.6px solid #a8c092;border-radius:12px;padding:12px 18px;display:flex;gap:14px;align-items:center;max-width:640px;margin:0 auto 30px}
+  .home-banner svg{width:30px;height:62px;flex:none;--stem:#7a5231;--c1:#3a7d44;--c2:#8fbc6a;--c3:#7d3f98}
+  .home-banner p{margin:0;font-size:14.5px;color:#33502b;line-height:1.5}
+  .home-basket svg{width:100%;height:auto;display:block}
+  .folder-card{background:#fbf6ea;border:1.6px solid #d9ccb2;border-radius:18px;display:grid;grid-template-columns:430px 1fr;gap:8px;padding:18px 44px 18px 18px;position:relative;overflow:hidden;margin-bottom:24px}
+  .folder-card .side-pattern{position:absolute;right:10px;top:12px;bottom:12px;width:22px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='30'><polygon points='11,3 18,11 11,19 4,11' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><path d='M4 24 L11 28 L18 24' stroke='%232e5e2a' fill='none' stroke-width='1.6'/></svg>") repeat-y center}
+  .fc-left svg{width:100%;height:auto;display:block}
+  .fc-right{text-align:center;align-self:center;padding:6px 26px}
+  .fc-title-row{display:flex;align-items:center;justify-content:center;gap:12px}
+  .fc-title{font-family:'Oswald';color:#2e5e2a;font-size:30px;letter-spacing:1px;margin:0}
+  .fc-title-row svg{width:46px;height:20px}
+  .fc-sub{font-size:15px;color:#5b3a1e;margin:8px auto 10px;max-width:560px;line-height:1.45}
+  .fc-div{height:16px;max-width:360px;margin:0 auto 12px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='16' viewBox='0 0 160 16'><polygon points='10,3 16,8 10,13 4,8' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><circle cx='26' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='42,3 48,8 42,13 36,8' fill='none' stroke='%23d95f18' stroke-width='1.6'/><circle cx='58' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='74,3 80,8 74,13 68,8' fill='none' stroke='%237d3f98' stroke-width='1.6'/><circle cx='90' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='106,3 112,8 106,13 100,8' fill='none' stroke='%231f6f8f' stroke-width='1.6'/><circle cx='122' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='138,3 144,8 138,13 132,8' fill='none' stroke='%23d9a03a' stroke-width='1.6'/><circle cx='154' cy='8' r='1.6' fill='%235b3a1e'/></svg>") repeat-x center}
+  .fc-text{font-size:13px;color:#4a4a4a;max-width:660px;margin:0 auto 18px;line-height:1.55}
+  .open-btn{background:#2e5e2a;color:#fff;font-family:'Nunito';font-weight:800;font-size:15px;border:none;border-radius:10px;padding:12px 32px;cursor:pointer;display:inline-flex;align-items:center;gap:10px;box-shadow:0 4px 10px rgba(46,94,42,.35);transition:.2s}
+  .open-btn:hover{transform:translateY(-2px);background:#24511f}
+  .home-diamonds{height:16px;width:62%;margin:0 auto 4px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='16' viewBox='0 0 160 16'><polygon points='10,3 16,8 10,13 4,8' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><circle cx='26' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='42,3 48,8 42,13 36,8' fill='none' stroke='%23d95f18' stroke-width='1.6'/><circle cx='58' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='74,3 80,8 74,13 68,8' fill='none' stroke='%237d3f98' stroke-width='1.6'/><circle cx='90' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='106,3 112,8 106,13 100,8' fill='none' stroke='%231f6f8f' stroke-width='1.6'/><circle cx='122' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='138,3 144,8 138,13 132,8' fill='none' stroke='%23d9a03a' stroke-width='1.6'/><circle cx='154' cy='8' r='1.6' fill='%235b3a1e'/></svg>") repeat-x center}
+  .home-wave{display:block;width:calc(100% + 68px);margin-left:-34px;height:110px}
+  /* ---------- SUBMENÚ TEJIDO ORGANIZATIVO ---------- */
+  .tej-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 4px 14px}
+  .tej-logo{width:150px;height:auto}
+  .tej-back{font-family:'Oswald';color:#2e5e2a;letter-spacing:1px;font-size:16px;background:none;border:none;border-bottom:3px solid #2e5e2a;border-radius:2px;padding:0 30px 6px;cursor:pointer}
+  .tej-back:hover{color:#24511f}
+  .tej-dl{display:flex;gap:9px;align-items:center;border:1.6px solid #b7a88c;background:#fffdf6;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer;color:#333;font-family:'Nunito'}
+  .tej-dl:hover{background:#f6efdf}
+  .band-full{height:16px;margin:0 -34px 24px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='16' viewBox='0 0 160 16'><polygon points='10,3 16,8 10,13 4,8' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><circle cx='26' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='42,3 48,8 42,13 36,8' fill='none' stroke='%23d95f18' stroke-width='1.6'/><circle cx='58' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='74,3 80,8 74,13 68,8' fill='none' stroke='%237d3f98' stroke-width='1.6'/><circle cx='90' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='106,3 112,8 106,13 100,8' fill='none' stroke='%231f6f8f' stroke-width='1.6'/><circle cx='122' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='138,3 144,8 138,13 132,8' fill='none' stroke='%23d9a03a' stroke-width='1.6'/><circle cx='154' cy='8' r='1.6' fill='%235b3a1e'/></svg>") repeat-x center}
+  .tej-main{display:grid;grid-template-columns:1fr 520px;gap:24px;align-items:center}
+  .tej-title-row h1{font-family:'Oswald';color:#2e5e2a;font-size:46px;letter-spacing:1px;margin:0}
+  .tej-title-row svg{width:56px;height:24px}
+  .tej-intro{font-size:15px;color:#4a4a4a;line-height:1.6;margin:14px 0 20px;max-width:580px}
+  .rutas-head{display:flex;align-items:center;gap:16px;justify-content:center;margin:14px 0 20px;font-family:'Oswald';color:#5b3a1e;font-size:26px;letter-spacing:1px}
+  .rutas-head:before,.rutas-head:after{content:"";flex:1;border-top:2px dashed #d95f18;opacity:.55}
+  .rutas-head svg{width:46px;height:20px}
+  .rutas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-bottom:26px}
+  .ruta{background:#f6efdf;border:1.5px solid #e0d5bd;border-radius:14px;padding:16px;display:grid;grid-template-columns:148px 1fr;gap:12px}
+  .ruta-folder{position:relative}
+  .ruta-folder > svg{width:100%;height:auto;display:block}
+  .ruta-branch{position:absolute;left:-12px;bottom:-14px;width:42px;height:86px;--stem:#7a5231;--c1:#8a5a2b;--c2:#b0763a;--c3:#7d3f98}
+  .ruta h3{font-family:'Oswald';font-size:19px;letter-spacing:.5px;margin:0;color:var(--rc);text-transform:uppercase}
+  .ruta .rsub{font-weight:800;font-size:13px;color:var(--rc);margin:4px 0 2px}
+  .ruta .rdiv{height:14px;max-width:230px;margin:6px 0;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='16' viewBox='0 0 160 16'><polygon points='10,3 16,8 10,13 4,8' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><circle cx='26' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='42,3 48,8 42,13 36,8' fill='none' stroke='%23d95f18' stroke-width='1.6'/><circle cx='58' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='74,3 80,8 74,13 68,8' fill='none' stroke='%237d3f98' stroke-width='1.6'/><circle cx='90' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='106,3 112,8 106,13 100,8' fill='none' stroke='%231f6f8f' stroke-width='1.6'/><circle cx='122' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='138,3 144,8 138,13 132,8' fill='none' stroke='%23d9a03a' stroke-width='1.6'/><circle cx='154' cy='8' r='1.6' fill='%235b3a1e'/></svg>") repeat-x center}
+  .ruta p{font-size:11.8px;color:#4a4a4a;line-height:1.5;margin:6px 0 12px}
+  .ruta-btn{background:var(--rc);color:#fff;font-family:'Nunito';font-weight:800;font-size:14px;border:none;border-radius:9px;padding:10px 28px;cursor:pointer;transition:.2s}
+  .ruta-btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
   [contenteditable]:empty:before{content:attr(data-ph);color:#b9b19f}
   @media print{
-    .toolbar,.hint,#view-menu{display:none !important}
+    .toolbar,.hint,#view-menu,#view-home,#view-tejido{display:none !important}
     body{background:#fff;padding:0}
     .sheet{width:100%;box-shadow:none;border:none;border-radius:0}
   }
@@ -140,7 +199,12 @@
 </head>
 <body>
 
+<!-- ============ SÍMBOLOS SVG COMPARTIDOS ============ -->
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="bw" width="46" height="44" patternUnits="userSpaceOnUse"><polygon points="23,6 36,22 23,38 10,22" fill="none" stroke="#7a4016" stroke-width="3"/><polygon points="23,14 29,22 23,30 17,22" fill="#d99a4a"/></pattern>
+    <pattern id="wv" width="46" height="26" patternUnits="userSpaceOnUse"><rect width="46" height="26" fill="#234f21"/><polygon points="23,5 31,13 23,21 15,13" fill="none" stroke="#d99a4a" stroke-width="1.6"/></pattern>
+  </defs>
   <symbol id="branch" viewBox="0 0 40 110">
     <path d="M20 108 C 18 78 22 40 20 4" stroke="var(--stem)" stroke-width="2" fill="none"/>
     <path d="M20 94 Q 6 90 2 76 Q 16 80 20 94" fill="var(--c1)"/>
@@ -169,28 +233,226 @@
     <circle cx="30" cy="30" r="13" fill="#c0392b"/>
     <circle cx="30" cy="30" r="6" fill="#f3e2c2"/>
   </symbol>
+  <symbol id="folder" viewBox="0 0 200 160">
+    <path d="M18 16 h62 l10 12 h92 v116 H18 z" fill="currentColor" opacity=".72"/>
+    <rect x="10" y="36" width="180" height="116" rx="9" fill="currentColor"/>
+    <rect x="22" y="48" width="156" height="92" rx="6" fill="none" stroke="#f6efe0" stroke-width="2.5" stroke-dasharray="7 6" opacity=".85"/>
+  </symbol>
+  <symbol id="basket" viewBox="0 0 520 430">
+    <path d="M290 130 L380 62 L470 130 Z" fill="#e6ebdb"/>
+    <path d="M360 138 L450 74 L520 138 Z" fill="#d5dfc6"/>
+    <circle cx="432" cy="62" r="34" fill="#f2a33c"/>
+    <path d="M330 40 q6 -7 12 0 M348 48 q5 -6 10 0" stroke="#6b4a2f" fill="none" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="260" cy="402" rx="215" ry="24" fill="#e5ddc8"/>
+    <svg x="8" y="60" width="70" height="150" style="--stem:#7a5231;--c1:#3a7d44;--c2:#8fbc6a;--c3:#7d3f98"><use href="#branch"/></svg>
+    <svg x="440" y="70" width="70" height="150" style="--stem:#7a5231;--c1:#3a7d44;--c2:#8fbc6a;--c3:#7d3f98"><use href="#branch"/></svg>
+    <g transform="rotate(-8 135 165)"><rect x="100" y="115" width="72" height="95" rx="9" fill="#3f7a3a"/><rect x="100" y="115" width="72" height="14" rx="7" fill="#57924f"/><circle cx="136" cy="168" r="17" fill="none" stroke="#fff" stroke-width="3"/><circle cx="136" cy="168" r="7" fill="none" stroke="#fff" stroke-width="3"/><path d="M136 168 L152 150 M148 150 h5 v5" stroke="#fff" stroke-width="3" fill="none"/></g>
+    <g transform="rotate(-4 208 160)"><rect x="172" y="108" width="72" height="98" rx="9" fill="#d95f18"/><rect x="172" y="108" width="72" height="14" rx="7" fill="#e8763a"/><circle cx="196" cy="140" r="10" fill="none" stroke="#fff" stroke-width="3"/><path d="M188 138 q8 -10 16 0" stroke="#fff" stroke-width="3" fill="none"/><text x="208" y="186" font-size="46" font-weight="bold" fill="#fff" text-anchor="middle" font-family="Nunito">?</text></g>
+    <g><rect x="246" y="103" width="72" height="100" rx="9" fill="#1f6f8f"/><rect x="246" y="103" width="72" height="14" rx="7" fill="#3a89a8"/><rect x="266" y="132" width="32" height="44" rx="4" fill="none" stroke="#fff" stroke-width="3"/><path d="M272 144 h20 M272 154 h20 M272 164 h14" stroke="#fff" stroke-width="3"/></g>
+    <g transform="rotate(4 348 160)"><rect x="312" y="108" width="72" height="98" rx="9" fill="#7d3f98"/><rect x="312" y="108" width="72" height="14" rx="7" fill="#9557b0"/><rect x="328" y="136" width="34" height="22" rx="6" fill="none" stroke="#fff" stroke-width="3"/><rect x="342" y="162" width="26" height="18" rx="5" fill="none" stroke="#fff" stroke-width="3"/></g>
+    <g transform="rotate(8 418 168)"><rect x="382" y="116" width="72" height="95" rx="9" fill="#d9a03a"/><rect x="382" y="116" width="72" height="14" rx="7" fill="#e5b558"/><path d="M418 190 V150" stroke="#fff" stroke-width="3"/><path d="M418 165 c0-10-7-14-14-14 0 10 7 14 14 14z" fill="#fff"/><path d="M418 152 c0-8 6-12 12-12 0 8-6 12-12 12z" fill="#fff"/></g>
+    <path d="M58 222 C 68 330 140 394 260 394 C 380 394 452 330 462 222 Z" fill="#b06a2a" stroke="#7a4016" stroke-width="3"/>
+    <path d="M58 222 C 68 330 140 394 260 394 C 380 394 452 330 462 222 Z" fill="url(#bw)" opacity=".55"/>
+    <rect x="50" y="204" width="420" height="34" rx="17" fill="#8a4a1c" stroke="#7a4016" stroke-width="2"/>
+    <path d="M62 221 H 458" stroke="#d99a4a" stroke-width="2.5" stroke-dasharray="8 7"/>
+  </symbol>
+  <symbol id="wave" viewBox="0 0 1250 110">
+    <path d="M0 110 L0 70 C 200 20 420 20 625 55 C 830 90 1050 90 1250 40 L1250 110 Z" fill="url(#wv)"/>
+    <path d="M0 70 C 200 20 420 20 625 55 C 830 90 1050 90 1250 40" fill="none" stroke="#e9a63a" stroke-width="3" stroke-dasharray="10 6"/>
+  </symbol>
+  <symbol id="sprig" viewBox="0 0 46 20">
+    <path d="M2 16 q12 -10 24 -6" stroke="#7ab648" fill="none" stroke-width="2"/>
+    <path d="M14 10 c0-5-4-7-8-7 0 5 4 7 8 7z" fill="#d95f18"/>
+  </symbol>
 </svg>
 
-<!-- ============ MENÚ ============ -->
-<div id="view-menu" class="view">
+<!-- ============================================================
+     PORTADA: CANASTO DE HERRAMIENTAS
+============================================================ -->
+<div id="view-home" class="view">
+  <div class="home">
+    <div class="home-top">
+      <div class="home-left">
+        <img src="logopawanka.png" alt="Pawanka Fund" class="home-logo">
+        <div class="home-titles">
+          <h2 class="home-kicker">CANASTO DE HERRAMIENTAS:</h2>
+          <h1 class="home-title">LAN PAWANKA</h1>
+          <div class="home-div"></div>
+        </div>
+        <p class="home-intro">Este es un espacio donde reunimos herramientas que vamos co-construyendo y aprendiendo junto con organizaciones y Pueblos Indígenas a través de nuestros procesos de acompañamiento.</p>
+        <div class="home-feats">
+          <div class="feat" style="--fc:#2e5e2a">
+            <div class="feat-ic"><svg viewBox="0 0 40 40" fill="#2e5e2a"><circle cx="20" cy="11" r="5.5"/><path d="M20 18c-6 0-10 4.5-10 9h20c0-4.5-4-9-10-9z"/><circle cx="8.5" cy="14" r="4"/><path d="M8.5 19c-4 0-6.5 3-6.5 6h9c0-2.5-1-4.6-2.5-6z"/><circle cx="31.5" cy="14" r="4"/><path d="M31.5 19c-1.5 1.4-2.5 3.5-2.5 6h9c0-3-2.5-6-6.5-6z"/></svg></div>
+            <p>Aquí encontrarás herramientas prácticas para fortalecer tus procesos y capacidades.</p>
+          </div>
+          <div class="feat" style="--fc:#d95f18">
+            <div class="feat-ic"><svg viewBox="0 0 40 40" fill="none" stroke="#d95f18" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 8v14"/><path d="M13 16l7 7 7-7"/><path d="M10 29h20"/></svg></div>
+            <p>Puedes conocer, descargar y utilizar las herramientas que sean útiles para tu camino.</p>
+          </div>
+          <div class="feat" style="--fc:#7d3f98">
+            <div class="feat-ic"><svg viewBox="0 0 40 40" fill="none" stroke="#7d3f98" stroke-width="2.4" stroke-linecap="round"><path d="M20 33V16"/><path d="M20 21c0-6-4-9-9-9 0 6 4 9 9 9z" fill="#7d3f98"/><path d="M20 16c0-5 3.5-8 8-8 0 5-3.5 8-8 8z" fill="#7d3f98"/></svg></div>
+            <p>Cada herramienta puede adaptarse a tu realidad, tu territorio y tu forma de organización.</p>
+          </div>
+          <div class="feat" style="--fc:#d9a03a">
+            <div class="feat-ic"><svg viewBox="0 0 40 40" fill="none" stroke="#d9a03a" stroke-width="2"><polygon points="20,6 34,20 20,34 6,20"/><polygon points="20,12 28,20 20,28 12,20"/><rect x="17" y="17" width="6" height="6"/></svg></div>
+            <p>Este canasto irá creciendo poco a poco con cada experiencia y aprendizaje compartido.</p>
+          </div>
+        </div>
+        <div class="home-banner">
+          <svg viewBox="0 0 40 110"><use href="#branch"/></svg>
+          <p>Un canasto que crece con cada aprendizaje<br>y se fortalece con cada experiencia compartida.</p>
+        </div>
+      </div>
+      <div class="home-basket"><svg viewBox="0 0 520 430"><use href="#basket"/></svg></div>
+    </div>
+
+    <section class="folder-card">
+      <div class="fc-left">
+        <svg viewBox="0 0 430 300">
+          <path d="M48 58 h120 l20 24 h196 v180 h-336 z" fill="#2e5e2a"/>
+          <rect x="58" y="94" width="318" height="168" rx="10" fill="#4a7a45" stroke="#2e5e2a" stroke-width="3"/>
+          <rect x="72" y="108" width="290" height="140" rx="6" fill="none" stroke="#e8e2cf" stroke-width="2" stroke-dasharray="7 6"/>
+          <circle cx="217" cy="178" r="52" fill="none" stroke="#e8e2cf" stroke-width="3"/>
+          <polygon points="217,140 252,178 217,216 182,178" fill="none" stroke="#d99a4a" stroke-width="3"/>
+          <path d="M217 205 V158" stroke="#e8e2cf" stroke-width="3"/>
+          <path d="M217 176 c0-12-8-17-16-17 0 12 8 17 16 17z" fill="#e8e2cf"/>
+          <path d="M217 162 c0-10 7-14 14-14 0 10-7 14-14 14z" fill="#e8e2cf"/>
+          <polygon points="196,196 204,204 196,212 188,204" fill="#d99a4a"/>
+          <polygon points="238,196 246,204 238,212 230,204" fill="#d99a4a"/>
+          <svg x="20" y="150" width="70" height="150" style="--stem:#7a5231;--c1:#3a7d44;--c2:#8fbc6a;--c3:#7d3f98"><use href="#branch"/></svg>
+        </svg>
+      </div>
+      <div class="fc-right">
+        <div class="fc-title-row">
+          <svg><use href="#sprig"/></svg>
+          <h2 class="fc-title">TEJIDO ORGANIZATIVO</h2>
+          <svg style="transform:scaleX(-1)"><use href="#sprig"/></svg>
+        </div>
+        <p class="fc-sub">Herramientas para conocernos, reconocer nuestro tejido y fortalecer nuestras capacidades.</p>
+        <div class="fc-div"></div>
+        <p class="fc-text">Esta carpeta reúne tres rutas de herramientas que nos ayudan a comprender quiénes somos, con quiénes caminamos, cuáles son nuestras capacidades y qué necesitamos fortalecer para seguir construyendo nuestro Buen Vivir.</p>
+        <button class="open-btn" onclick="showView('tejido')">Abrir carpeta ❯</button>
+      </div>
+      <div class="side-pattern"></div>
+    </section>
+
+    <div class="home-diamonds"></div>
+    <svg class="home-wave" viewBox="0 0 1250 110" preserveAspectRatio="none"><use href="#wave"/></svg>
+  </div>
+</div>
+
+<!-- ============================================================
+     SUBMENÚ: TEJIDO ORGANIZATIVO
+============================================================ -->
+<div id="view-tejido" class="view hidden">
+  <div class="home">
+    <div class="tej-bar">
+      <img src="logopawanka.png" alt="Pawanka Fund" class="tej-logo">
+      <button class="tej-back" onclick="showView('home')">←&nbsp; CANASTO DE HERRAMIENTAS</button>
+      <button class="tej-dl" onclick="alert('📥 Aquí podrás enlazar tus archivos para descargar.')">⬇ Descargar recursos</button>
+    </div>
+    <div class="band-full"></div>
+
+    <div class="tej-main">
+      <div>
+        <div class="fc-title-row tej-title-row">
+          <svg><use href="#sprig"/></svg>
+          <h1>TEJIDO ORGANIZATIVO</h1>
+          <svg style="transform:scaleX(-1)"><use href="#sprig"/></svg>
+        </div>
+        <div class="fc-div" style="max-width:300px;margin-top:10px"></div>
+        <p class="tej-intro">Este conjunto de herramientas busca acompañar a las organizaciones de Pueblos Indígenas a conocerse mejor, comprender su estado actual, reconocer sus capacidades y fortalecer su trabajo colectivo.</p>
+        <div class="home-banner" style="margin:0">
+          <svg viewBox="0 0 40 110"><use href="#branch"/></svg>
+          <p>Cada ruta reúne herramientas prácticas que pueden adaptarse a tu realidad, tu territorio y tu forma de organización.</p>
+        </div>
+      </div>
+      <div class="home-basket"><svg viewBox="0 0 520 430"><use href="#basket"/></svg></div>
+    </div>
+
+    <div class="rutas-head">
+      <svg><use href="#sprig"/></svg>
+      <span>RUTAS DISPONIBLES</span>
+      <svg style="transform:scaleX(-1)"><use href="#sprig"/></svg>
+    </div>
+
+    <div class="rutas">
+      <section class="ruta" style="--rc:#3f7a3a">
+        <div class="ruta-folder">
+          <svg viewBox="0 0 200 160" style="color:#3f7a3a"><use href="#folder"/>
+            <g stroke="#f6efe0" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="70" y="82" width="60" height="40" rx="4" stroke-dasharray="8 6"/>
+              <path d="M100 64 c-10 0-17 8-17 16 0 12 17 28 17 28 s17-14 17-28 c0-8-7-16-17-16z"/>
+              <circle cx="100" cy="80" r="6"/>
+            </g>
+          </svg>
+          <svg class="ruta-branch"><use href="#branch"/></svg>
+        </div>
+        <div>
+          <h3>1. Ruta de Mapeo Organizativo</h3>
+          <p class="rsub">Reconocer nuestro tejido</p>
+          <div class="rdiv"></div>
+          <p>Herramientas para identificar quiénes son las organizaciones, comunidades, redes y territorios con los que trabajamos, dónde están y qué hacen.</p>
+          <button class="ruta-btn" onclick="showView('menu')">Abrir ruta ❯</button>
+        </div>
+      </section>
+
+      <section class="ruta" style="--rc:#d95f18">
+        <div class="ruta-folder">
+          <svg viewBox="0 0 200 160" style="color:#d95f18"><use href="#folder"/>
+            <g stroke="#f6efe0" fill="none" stroke-width="4" stroke-linecap="round">
+              <circle cx="100" cy="92" r="34"/>
+              <circle cx="100" cy="70" r="6"/><circle cx="76" cy="92" r="6"/><circle cx="124" cy="92" r="6"/><circle cx="100" cy="114" r="6"/>
+              <path d="M100 100 V86 M100 92 c0-6-4-9-9-9 0 6 4 9 9 9z M100 92 c0-6 4-9 9-9 0 6-4 9-9 9z"/>
+            </g>
+          </svg>
+          <svg class="ruta-branch"><use href="#branch"/></svg>
+        </div>
+        <div>
+          <h3>2. Ruta de Diagnóstico Organizativo</h3>
+          <p class="rsub">Comprender cómo estamos</p>
+          <div class="rdiv"></div>
+          <p>Herramientas para comprender el estado actual de nuestra organización, reconocer fortalezas, desafíos y necesidades, y definir líneas de mejora.</p>
+          <button class="ruta-btn" onclick="alert('🌱 Esta ruta estará disponible próximamente.')">Abrir ruta ❯</button>
+        </div>
+      </section>
+
+      <section class="ruta" style="--rc:#1f6f8f">
+        <div class="ruta-folder">
+          <svg viewBox="0 0 200 160" style="color:#1f6f8f"><use href="#folder"/>
+            <g stroke="#f6efe0" fill="none" stroke-width="4" stroke-linecap="round">
+              <circle cx="100" cy="92" r="34" stroke-dasharray="10 8"/>
+              <circle cx="100" cy="78" r="9"/>
+              <path d="M84 112 c0-10 7-16 16-16 s16 6 16 16"/>
+              <path d="M100 106 l-5 -5 a3.5 3.5 0 1 1 5 -5 a3.5 3.5 0 1 1 5 5 z" fill="#f6efe0" stroke="none"/>
+            </g>
+          </svg>
+          <svg class="ruta-branch"><use href="#branch"/></svg>
+        </div>
+        <div>
+          <h3>3. Ruta de Autoevaluación Organizativa</h3>
+          <p class="rsub">Reconocer dónde queremos crecer</p>
+          <div class="rdiv"></div>
+          <p>Herramientas para conocer nuestro nivel de desarrollo organizativo, identificar capacidades que queremos fortalecer y posibles formas de acompañamiento.</p>
+          <button class="ruta-btn" onclick="alert('🌱 Esta ruta estará disponible próximamente.')">Abrir ruta ❯</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="home-diamonds"></div>
+    <svg class="home-wave" viewBox="0 0 1250 110" preserveAspectRatio="none"><use href="#wave"/></svg>
+  </div>
+</div>
+
+<!-- ============================================================
+     MENÚ DE HERRAMIENTAS (Ruta 1: Mapeo Organizativo)
+============================================================ -->
+<div id="view-menu" class="view hidden">
+  <div class="toolbar"><button class="tb-back" onclick="showView('tejido')">⬅ Volver a Tejido Organizativo</button></div>
   <div class="menu">
-    <div class="menu-logo">
-      <svg viewBox="0 0 100 100">
-        <path d="M50 50 L50 4 A46 46 0 0 0 4 50 Z" fill="#7ab648"/>
-        <path d="M50 50 L4 50 A46 46 0 0 0 50 96 Z" fill="#d94a38"/>
-        <path d="M50 50 L50 96 A46 46 0 0 0 96 50 Z" fill="#2e6db4"/>
-        <path d="M50 50 L96 50 A46 46 0 0 0 50 4 Z" fill="#f2a33c"/>
-        <rect x="35" y="35" width="30" height="30" fill="#a2499a"/>
-        <rect x="43" y="43" width="14" height="14" fill="#8fbc6a"/>
-      </svg>
-      <div style="font-weight:800;letter-spacing:2px;color:#222">PAWANKA</div>
-      <div style="font-size:10px;letter-spacing:4px;color:#666;font-weight:700">FUND</div>
-    </div>
-    <div class="title-row">
-      <img src="logopawanka.png" alt="Logo Pawanka" class="title-logo">
-      <h1 class="menu-title">Herramientas LAN Pawanka</h1>
-    </div>
-    <p class="menu-sub">Selecciona una herramienta para abrirla, escriban sus acuerdos y expórtala en PDF o PNG.</p>
+    <div class="menu-logo"><img src="logopawanka.png" alt="Logo Pawanka" class="menu-logo-img"></div>
+    <h1 class="menu-title">Herramientas LAN Pawanka</h1>
+    <p class="menu-sub">Ruta de Mapeo Organizativo · selecciona una herramienta, escriban sus acuerdos y expórtala en PDF o PNG.</p>
     <div class="menu-cards">
       <button class="menu-card m1" onclick="showView('t1')">
         <span class="m-num">HERRAMIENTA 1</span>
@@ -206,7 +468,9 @@
   </div>
 </div>
 
-<!-- ============ HERRAMIENTA 1 ============ -->
+<!-- ============================================================
+     HERRAMIENTA 1
+============================================================ -->
 <div id="view-t1" class="view hidden">
   <div class="toolbar">
     <button class="tb-back" onclick="showView('menu')">🏠 Volver al menú</button>
@@ -339,7 +603,9 @@
   </div>
 </div>
 
-<!-- ============ HERRAMIENTA 6 ============ -->
+<!-- ============================================================
+     HERRAMIENTA 6
+============================================================ -->
 <div id="view-t6" class="view hidden">
   <div class="toolbar">
     <button class="tb-back" onclick="showView('menu')">🏠 Volver al menú</button>
