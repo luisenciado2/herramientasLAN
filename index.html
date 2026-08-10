@@ -314,6 +314,85 @@
   .t7btn{display:block;width:100%;background:var(--tc);color:#fff;border:none;border-radius:8px;padding:9px 0;font-weight:800;font-size:12.5px;cursor:pointer;font-family:'Nunito'}
   .t7dl{display:flex;gap:7px;justify-content:center;align-items:center;background:none;border:none;margin:9px auto 0;font-weight:800;font-size:12px;color:#333;cursor:pointer;font-family:'Nunito'}
   [contenteditable]:empty:before{content:attr(data-ph);color:#b9b19f}
+  /* ============================================================
+   OPTIMIZACIÓN PARA CELULAR (RESPONSIVE)
+   ============================================================ */
+@media (max-width:900px){
+  body{padding:12px 6px}
+  html,body{overflow-x:hidden}
+  .toolbar{position:static}
+  /* Portada y contenedores */
+  .home{padding:18px 14px 0}
+  .home-top{grid-template-columns:1fr}
+  .home-logo{width:120px}
+  .home-title{font-size:42px}
+  .home-kicker{font-size:20px}
+  .home-feats{grid-template-columns:1fr 1fr;gap:14px}
+  .feat + .feat{border-left:none}
+  .home-basket{max-width:420px;margin:0 auto}
+  .home-bottom-logo img{width:80px}
+  .folder-card{grid-template-columns:1fr;padding:14px}
+  .fc-left svg{max-width:320px;margin:0 auto}
+  .tej-bar{flex-wrap:wrap}
+  .tej-logo{width:120px}
+  .tej-main{grid-template-columns:1fr}
+  .tej-main .home-basket{max-width:420px;margin:0 auto}
+  .rutas{grid-template-columns:1fr}
+  .ruta{grid-template-columns:110px 1fr}
+  .map-head{grid-template-columns:1fr}
+  .map-head .map-folder{max-width:190px;margin:0 auto}
+  .map-head .home-basket{max-width:420px;margin:0 auto}
+  .map-cards{grid-template-columns:1fr}
+  .tools7{grid-template-columns:1fr 1fr}
+  .tools7b{grid-template-columns:1fr 1fr;max-width:100%}
+  /* Hojas de herramientas */
+  .sheet{max-width:100%}
+  #view-t1 header,#view-t2 header,#view-t4 header,#view-t5 header,#view-t6 header{grid-template-columns:1fr;justify-items:center;gap:4px}
+  #view-t1 .antes{flex-direction:column;align-items:flex-start}
+  #view-t1 .ngrid{grid-template-columns:1fr}
+  #view-t1 .nbottom{grid-template-columns:1fr}
+  /* Herramienta 2: tabla con deslizamiento horizontal */
+  #view-t2 .t2wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #view-t2 .t2{min-width:640px}
+  /* Herramienta 4: tablas con deslizamiento horizontal */
+  #view-t4 .t4wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #view-t4 table{min-width:760px}
+  #view-t4 .seg-head{flex-direction:column;align-items:flex-start}
+  #view-t4 .seg-leaf{display:none}
+  #view-t4 .estados{flex-direction:column;align-items:flex-start}
+  #view-t4 .est-note{margin-left:0;max-width:100%}
+  /* Herramienta 5 */
+  #view-t5 .grid5{grid-template-columns:1fr}
+  #view-t5 .q1 .qrow,#view-t5 .q1 .dashbox{margin-left:0}
+  #view-t5 footer{flex-direction:column;align-items:flex-start}
+  /* Herramienta 6 */
+  #view-t6 .grid{grid-template-columns:1fr}
+  #view-t6 .card.right .lines{margin:0 12px 4px 44px}
+  #view-t6 .decisions{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #view-t6 table{min-width:520px}
+  #view-t6 footer{flex-direction:column;align-items:flex-start}
+  /* Video y hoja de cálculo */
+  .video-head{flex-direction:column;align-items:flex-start;gap:8px}
+  .autoeval-frame{height:70vh;min-height:420px}
+}
+@media (max-width:480px){
+  .home-title{font-size:32px}
+  .home-kicker{font-size:17px}
+  .home-feats{grid-template-columns:1fr}
+  .home-bottom-logo img{width:70px}
+  .tools7{grid-template-columns:1fr}
+  .tools7b{grid-template-columns:1fr}
+  .ruta{grid-template-columns:1fr}
+  .ruta-folder{max-width:160px;margin:0 auto}
+  .title-logo{width:46px}
+  #view-t1 h1{font-size:20px}
+  #view-t2 h1{font-size:22px}
+  #view-t4 h1{font-size:19px}
+  #view-t5 h1{font-size:22px}
+  #view-t6 h1{font-size:24px}
+  .nstrip{font-size:10px;gap:8px;flex-wrap:wrap}
+  .t7 .t7t b{font-size:14px}
+}
   @media print{
     .toolbar,.hint,#view-home,#view-tejido,#view-mapeo,#view-autoeval,#view-t3{display:none !important}
     body{background:#fff;padding:0}
