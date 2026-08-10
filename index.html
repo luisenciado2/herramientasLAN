@@ -943,81 +943,90 @@ function exportPDFDesdeBoton(btn){
   const view = btn.closest('.view');
   const sheet = view.querySelector('.sheet');
   if(!sheet){ alert('No se encontró la hoja'); return; }
-  
   btn.disabled = true;
   const textoOriginal = btn.innerHTML;
   btn.innerHTML = '⏳ Generando PDF...';
-  
-  // Espera a que todas las imágenes terminen de cargar
-  const imagenes = sheet.querySelectorAll('img');
-  let cargadas = 0;
-  const total = imagenes.length;
-  
-  function verificarCarga(){
-    cargadas++;
-    if(cargadas >= total || total === 0){
-      generarPDF();
-    }
+
+  function urlDe(txt){
+    const m = txt.match(/url\(["']?([^"')]+)["']?\)/);
+    return m ? m[1] : null;
   }
-  
-  imagenes.forEach(function(img){
-    if(img.complete){
-      verificarCarga();
+  function aBase64(url){
+    return fetch(url).then(function(r){ return r.blob(); }).then(function(b){
+      return new Promise(function(res){
+        const fr = new FileReader();
+        fr.onload = function(){ res(fr.result); };
+        fr.readAsDataURL(b);
+      });
+    });
+  }
+  function restaurar(){
+    sheet.querySelectorAll('img[data-src-original]').forEach(function(img){
+      img.src = img.getAttribute('data-src-original');
+      img.removeAttribute('data-src-original');
+    });
+    const st = document.getElementById('estilosBase64Temp');
+    if(st) st.remove();
+    btn.disabled = false;
+    btn.innerHTML = textoOriginal;
+  }
+
+  // 1) Convertir todas las <img> de la hoja a base64
+  const tareas = Array.prototype.slice.call(sheet.querySelectorAll('img')).map(function(img){
+    if(!img.src || img.src.indexOf('data:') === 0) return Promise.resolve();
+    return aBase64(img.src).then(function(d){
+      img.setAttribute('data-src-original', img.src);
+      img.src = d;
+    }).catch(function(){});
+  });
+
+  // 2) Convertir el logo LAN (fondo ::after) a base64
+  const estilosTemp = document.createElement('style');
+  estilosTemp.id = 'estilosBase64Temp';
+  ['t1','t2','t4','t5','t6'].forEach(function(v){
+    const s = document.querySelector('#view-'+v+' .sheet');
+    if(!s) return;
+    const bg = getComputedStyle(s,'::after').backgroundImage;
+    const u = bg ? urlDe(bg) : null;
+    if(!u || u.indexOf('data:') === 0) return;
+    tareas.push(aBase64(u).then(function(d){
+      estilosTemp.textContent += '#view-'+v+' .sheet::after{background-image:url("'+d+'") !important}\n';
+    }).catch(function(){}));
+  });
+
+  // 3) Capturar y generar el PDF
+  Promise.all(tareas).then(function(){
+    if(estilosTemp.textContent) document.head.appendChild(estilosTemp);
+    return html2canvas(sheet,{scale:2,backgroundColor:'#ffffff',logging:false});
+  }).then(function(canvas){
+    const imgData = canvas.toDataURL('image/png');
+    restaurar();
+    const jsPDF = window.jspdf.jsPDF;
+    const pdf = new jsPDF('p','mm','a4');
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = pdf.internal.pageSize.getHeight();
+    const ratio = Math.min(pdfWidth/canvas.width, pdfHeight/canvas.height);
+    const imgX = (pdfWidth - canvas.width*ratio)/2;
+    let position = 0;
+    let heightLeft = canvas.height*ratio;
+    pdf.addImage(imgData,'PNG',imgX,position,canvas.width*ratio,canvas.height*ratio);
+    heightLeft -= pdfHeight;
+    while(heightLeft > 0){
+      position = heightLeft - canvas.height*ratio;
+      pdf.addPage();
+      pdf.addImage(imgData,'PNG',imgX,position,canvas.width*ratio,canvas.height*ratio);
+      heightLeft -= pdfHeight;
+    }
+    pdf.save(view.id.replace('view-','Herramienta_')+'.pdf');
+  }).catch(function(err){
+    restaurar();
+    console.error(err);
+    if(location.protocol === 'file:'){
+      alert('⚠️ Estás abriendo el archivo directamente desde tu computadora. Sube los cambios a GitHub y prueba el botón PDF en tu sitio publicado.');
     } else {
-      img.onload = verificarCarga;
-      img.onerror = verificarCarga;
+      alert('Error al generar el PDF: '+err.message);
     }
   });
-  
-  if(total === 0) generarPDF();
-  
-  function generarPDF(){
-    setTimeout(function(){
-      html2canvas(sheet, {
-        scale: 2,
-        backgroundColor: '#ffffff',
-        useCORS: true,
-        logging: false,
-        // IMPORTANTE: NO usar allowTaint
-      }).then(function(canvas){
-        const imgData = canvas.toDataURL('image/png');
-        const { jsPDF } = window.jspdf;
-        const pdf = new jsPDF('p', 'mm', 'a4');
-        
-        const pdfWidth = pdf.internal.pageSize.getWidth();
-        const pdfHeight = pdf.internal.pageSize.getHeight();
-        const imgWidth = canvas.width;
-        const imgHeight = canvas.height;
-        const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
-        const imgX = (pdfWidth - imgWidth * ratio) / 2;
-        
-        let position = 0;
-        let heightLeft = imgHeight * ratio;
-        
-        pdf.addImage(imgData, 'PNG', imgX, position, imgWidth * ratio, imgHeight * ratio);
-        heightLeft -= pdfHeight;
-        
-        while (heightLeft > 0) {
-          position = heightLeft - imgHeight * ratio;
-          pdf.addPage();
-          pdf.addImage(imgData, 'PNG', imgX, position, imgWidth * ratio, imgHeight * ratio);
-          heightLeft -= pdfHeight;
-        }
-        
-        const nombre = view.id.replace('view-', 'Herramienta_');
-        pdf.save(nombre + '.pdf');
-        
-        btn.disabled = false;
-        btn.innerHTML = textoOriginal;
-        
-      }).catch(function(error){
-        console.error('Error al generar PDF:', error);
-        alert('Error al generar el PDF: ' + error.message);
-        btn.disabled = false;
-        btn.innerHTML = textoOriginal;
-      });
-    }, 300);
-  }
 }
 function limpiar(viewId){
   if(!confirm('¿Borrar todo lo escrito en esta herramienta?'))return;
