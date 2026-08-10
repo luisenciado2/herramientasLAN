@@ -32,22 +32,27 @@
   .logo-lan{text-align:center;width:120px}
   .logo-lan .lan{font-family:'Oswald';font-weight:700;font-size:24px;color:#173a5e;letter-spacing:2px}
   .logo-lan .paw{font-size:11px;letter-spacing:5px;color:#173a5e;font-weight:700}
-  /* ---------- RUTA AUTOEVALUACIÓN (IFRAME) ---------- */
   .autoeval-frame{width:100%;height:calc(100vh - 180px);min-height:600px;border:none;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);background:#fff;display:block;margin:0 auto}
   .autoeval-wrap{max-width:1250px;margin:0 auto;padding:20px 12px}
   .autoeval-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap}
   .autoeval-head h1{font-family:'Oswald';color:#2e5e2a;font-size:32px;letter-spacing:1px;margin:0;text-transform:uppercase}
   .autoeval-head .autoeval-back{font-family:'Oswald';color:#2e5e2a;letter-spacing:1px;font-size:15px;background:none;border:none;border-bottom:3px solid #2e5e2a;border-radius:2px;padding:0 26px 6px;cursor:pointer}
-  .autoeval-head .autoeval-back:hover{color:#24511f}
-  /* ---------- HERRAMIENTA 3 (VIDEO) ---------- */
   .video-wrap{max-width:1000px;margin:0 auto;padding:20px 12px}
   .video-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap}
   .video-head h1{font-family:'Oswald';color:#2e5e2a;font-size:30px;letter-spacing:1px;margin:0;text-transform:uppercase}
   .video-head .video-back{font-family:'Oswald';color:#2e5e2a;letter-spacing:1px;font-size:15px;background:none;border:none;border-bottom:3px solid #2e5e2a;border-radius:2px;padding:0 26px 6px;cursor:pointer}
-  .video-head .video-back:hover{color:#24511f}
   .video-frame{width:100%;aspect-ratio:16/9;border:none;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.18);background:#000;display:block}
   .video-note{margin-top:14px;background:#e6eed6;border:1.6px solid #a8c092;border-radius:12px;padding:12px 18px;font-size:13px;color:#33502b}
-  /* ---------- HERRAMIENTA 6 ---------- */
+  #view-t4 select.sel-estado{width:100%;max-width:70px;height:30px;border:1.6px solid #c9bda6;border-radius:7px;font-family:'Nunito';font-weight:800;font-size:13px;text-align:center;outline:none;background:#fff;color:#333;cursor:pointer;padding:2px 4px}
+  #view-t4 select.sel-estado[data-v="P"]{background:#7a8f3a;border-color:#7a8f3a;color:#fff}
+  #view-t4 select.sel-estado[data-v="E"]{background:#17718f;border-color:#17718f;color:#fff}
+  #view-t4 select.sel-estado[data-v="C"]{background:#7d3f98;border-color:#7d3f98;color:#fff}
+  #view-t4 select.sel-estado[data-v="R"]{background:#d95f18;border-color:#d95f18;color:#fff}
+  #view-t4 select.sel-estado option{background:#fff;color:#333;font-weight:800}
+  #view-t4 select.sel-estado option[value="P"]{color:#7a8f3a}
+  #view-t4 select.sel-estado option[value="E"]{color:#17718f}
+  #view-t4 select.sel-estado option[value="C"]{color:#7d3f98}
+  #view-t4 select.sel-estado option[value="R"]{color:#d95f18}
   #view-t6 header{display:grid;grid-template-columns:120px 1fr 120px;align-items:center;padding:18px 18px 6px}
   #view-t6 .logo-pawanka svg{width:78px;height:78px}
   #view-t6 .head-center{text-align:center}
@@ -57,10 +62,10 @@
   #view-t6 .squiggle{display:block;margin:4px auto 0;width:210px;height:10px}
   #view-t6 .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:12px 18px}
   #view-t6 .card{border:1.6px solid var(--bd);background:var(--bg);border-radius:14px;padding:14px 12px 12px;text-align:center;position:relative}
-  #view-t6 .card.green {--bd:#8fbf8f;--bg:#eef7ee;--tt:#2e7d4f;--ln:#a9cfa9;--c1:#3a7d44;--c2:#8fbc6a}
+  #view-t6 .card.green{--bd:#8fbf8f;--bg:#eef7ee;--tt:#2e7d4f;--ln:#a9cfa9;--c1:#3a7d44;--c2:#8fbc6a}
   #view-t6 .card.orange{--bd:#f0b27a;--bg:#fdf3e6;--tt:#e2571e;--ln:#f3c9a4;--c1:#e2571e;--c2:#7ab648}
   #view-t6 .card.purple{--bd:#c39bd2;--bg:#f5eef8;--tt:#7d3f98;--ln:#d7bce1;--c1:#7d3f98;--c2:#b76fbf}
-  #view-t6 .card.blue  {--bd:#93b8d7;--bg:#ecf3f9;--tt:#1f6fb2;--ln:#bcd4e7;--c1:#1f6fb2;--c2:#69a8d8}
+  #view-t6 .card.blue{--bd:#93b8d7;--bg:#ecf3f9;--tt:#1f6fb2;--ln:#bcd4e7;--c1:#1f6fb2;--c2:#69a8d8}
   #view-t6 .icon{width:56px;height:56px;border:2.4px solid var(--tt);border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 8px}
   #view-t6 .card h2{font-family:'Oswald';font-size:15.5px;letter-spacing:.6px;color:var(--tt);text-transform:uppercase;margin:2px 0 6px}
   #view-t6 .card .q{font-style:italic;font-size:11.5px;color:#666;margin:0 34px 10px}
@@ -76,11 +81,13 @@
   #view-t6 .target{width:44px;height:44px;border:2.4px solid #c0392b;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;flex:none}
   #view-t6 .dec-head h2{font-family:'Oswald';color:#8c3b1f;font-size:16px;letter-spacing:1px;margin:0;text-transform:uppercase}
   #view-t6 .dec-head p{margin:2px 0 0;font-size:11.5px;color:#6b4a2f}
-  #view-t6 table{width:100%;border-collapse:collapse;margin-top:10px}
+  #view-t6 table{width:100%;border-collapse:collapse;margin-top:10px;table-layout:fixed}
+  #view-t6 .decisions th:nth-child(2){width:44%}
+  #view-t6 .decisions th:nth-child(3){width:27%}
+  #view-t6 .decisions th:nth-child(4){width:27%}
   #view-t6 th{background:#b05e2a;color:#fff;font-family:'Oswald';font-size:12.5px;letter-spacing:1px;padding:7px 6px;border:1px solid #96501f}
   #view-t6 th:first-child{width:34px;background:#f8ead6;border-color:#d8b28c}
-  #view-t6 td{border:1px solid #d8b28c;background:#fffdf7;height:34px;padding:4px 8px;font-size:12.5px;outline:none;vertical-align:middle}
-  #view-t6 td:focus{background:#fdf6e9}
+  #view-t6 td{border:1px solid #d8b28c;background:#fffdf7;height:34px;padding:6px 8px;font-size:12.5px;outline:none;vertical-align:top;white-space:pre-wrap;overflow-wrap:break-word;word-break:break-word}
   #view-t6 td.numcell{width:34px;text-align:center;background:#f8ead6}
   #view-t6 .num{display:inline-flex;width:21px;height:21px;border-radius:50%;background:#c0392b;color:#fff;font-weight:800;font-size:12px;align-items:center;justify-content:center}
   #view-t6 footer{display:flex;align-items:center;gap:12px;padding:6px 18px 12px}
@@ -89,7 +96,6 @@
   #view-t6 .msg p{margin:6px 0 0;font-size:11px;color:#4c6b45;font-style:italic}
   #view-t6 .foot-art{flex:1;display:flex;justify-content:center}
   #view-t6 .foot-art svg{width:230px;height:72px}
-  /* ---------- HERRAMIENTA 1 ---------- */
   #view-t1 header{display:grid;grid-template-columns:110px 1fr 110px;align-items:center;padding:18px 18px 4px}
   #view-t1 .logo-pawanka svg{width:74px;height:74px}
   #view-t1 .head-center{text-align:center}
@@ -103,8 +109,8 @@
   #view-t1 .antes .branch{width:40px;height:90px;flex:none;--stem:#7a5231;--c1:#3a7d44;--c2:#8fbc6a}
   #view-t1 .ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:6px 18px}
   #view-t1 .ncard{border:1.6px solid var(--c);border-radius:12px;background:#fffdf8;padding:10px 10px 12px}
-  #view-t1 .c1{--c:#1e7a3c} #view-t1 .c2{--c:#e2571e} #view-t1 .c3{--c:#17718f}
-  #view-t1 .c4{--c:#7d3f98} #view-t1 .c5{--c:#e9a63a} #view-t1 .c6{--c:#c0392b}
+  #view-t1 .c1{--c:#1e7a3c}#view-t1 .c2{--c:#e2571e}#view-t1 .c3{--c:#17718f}
+  #view-t1 .c4{--c:#7d3f98}#view-t1 .c5{--c:#e9a63a}#view-t1 .c6{--c:#c0392b}
   #view-t1 .nhead{display:flex;align-items:center;gap:7px;margin-bottom:8px}
   #view-t1 .nnum{width:26px;height:26px;border-radius:50%;background:var(--c);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px;flex:none}
   #view-t1 .ntitle{background:var(--c);color:#fff;font-family:'Oswald';font-size:12.5px;letter-spacing:.3px;padding:6px 8px;border-radius:7px;flex:1;text-align:center}
@@ -112,7 +118,6 @@
   #view-t1 .nq .em{font-size:14px;flex:none}
   #view-t1 .zig{display:block;width:64px;height:10px;color:var(--c);margin:6px 0 2px}
   #view-t1 .writebox{min-height:62px;border:1.5px solid #dccfb8;border-radius:10px;background:#fff;padding:6px 8px;font-size:12px;outline:none;margin-top:6px}
-  #view-t1 .writebox:focus{border-color:var(--c)}
   #view-t1 .chk{display:flex;gap:6px;align-items:center;font-size:10.8px;color:#555;margin:4px 0}
   #view-t1 .chk input{accent-color:#17718f;width:13px;height:13px;flex:none}
   #view-t1 .chk .write2{flex:1;border-bottom:1px solid #bcd4e7;min-height:14px;outline:none;font-size:10.8px}
@@ -128,7 +133,6 @@
   #view-t1 .nstrip{background:#8c2f26;color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 14px;font-family:'Oswald';letter-spacing:1.5px;font-size:13px}
   #view-t1 .nstrip .d{color:#e9a63a}
   #view-t1 .nstrip .lanw{font-family:'Oswald';font-weight:700;color:#fff;letter-spacing:1px;font-size:13px;text-align:right;line-height:1.1}
-  /* ---------- HERRAMIENTA 2 (FILAS COMPARTIDAS) ---------- */
   #view-t2 header{display:grid;grid-template-columns:110px 1fr 120px;align-items:center;padding:18px 18px 4px}
   #view-t2 .logo-pawanka svg{width:74px;height:74px}
   #view-t2 .head-center{text-align:center}
@@ -155,13 +159,11 @@
   #view-t2 .zd{width:10px;height:40px;color:var(--bc);flex:none;opacity:.8}
   #view-t2 .dot2{width:7px;height:7px;border-radius:50%;background:var(--bc);flex:none;margin-top:5px}
   #view-t2 .cell{flex:1;min-width:0;min-height:36px;font-size:12px;color:#222;outline:none}
-  #view-t2 .cell:focus{background:#fbf7ee;border-radius:6px}
   #view-t2 .t2foot{display:flex;justify-content:flex-end;padding:10px 22px 4px}
   #view-t2 .lan2{text-align:right}
   #view-t2 .lan2 .lan{font-family:'Oswald';font-weight:700;font-size:22px;color:#173a5e;letter-spacing:2px}
   #view-t2 .lan2 .paw2{font-size:10px;color:#666;font-style:italic}
   #view-t2 .t2band{height:24px;margin-top:8px}
-  /* ---------- HERRAMIENTA 4 ---------- */
   #view-t4 header{display:grid;grid-template-columns:110px 1fr 210px;align-items:center;padding:16px 18px 4px}
   #view-t4 .logo-pawanka svg{width:66px;height:66px}
   #view-t4 .head-center{text-align:center}
@@ -174,12 +176,7 @@
   #view-t4 th svg{width:26px;height:26px;display:block;margin:0 auto 6px}
   #view-t4 th .leg{font-weight:600;font-size:9.5px;display:block;margin-top:5px;text-align:left;line-height:1.4}
   #view-t4 td{border:1px solid #d8cbb6;background:#f7f5f0;height:34px;padding:4px 8px;font-size:11.5px;outline:none;vertical-align:middle}
-  #view-t4 td:focus{background:#fff}
   #view-t4 td.ckc{text-align:center}
-  #view-t4 .ck-o{accent-color:#d95f18;width:15px;height:15px}
-  #view-t4 .ck-p{accent-color:#7d3f98;width:15px;height:15px}
-  #view-t4 .ck-t{accent-color:#17718f;width:15px;height:15px}
-  #view-t4 .ck-b{accent-color:#b06a2a;width:15px;height:15px}
   #view-t4 .seg-head{display:flex;align-items:center;gap:14px;padding:16px 18px 8px}
   #view-t4 .seg-ic{width:56px;height:56px;border:2.5px solid #d9a03a;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;background:#fffdf6}
   #view-t4 .seg-ic svg{width:30px;height:30px}
@@ -196,7 +193,6 @@
   #view-t4 .est-note svg{width:30px;height:26px;flex:none}
   #view-t4 .f4{display:flex;justify-content:flex-end;padding:0 22px 14px}
   #view-t4 .f4 .logo-lan{text-align:right}
-  /* ---------- HERRAMIENTA 5 ---------- */
   #view-t5 header{display:grid;grid-template-columns:110px 1fr 130px;align-items:center;padding:18px 18px 6px}
   #view-t5 .logo-pawanka svg{width:74px;height:74px}
   #view-t5 .head-center{text-align:center}
@@ -220,7 +216,6 @@
   #view-t5 .qic{width:32px;height:32px;flex:none;color:var(--tt)}
   #view-t5 .qtext{font-size:11px;color:#666;line-height:1.45;margin:0}
   #view-t5 .dashbox{min-height:150px;border:2px dashed var(--tt);border-radius:10px;background:#fff;outline:none;padding:8px;font-size:12px}
-  #view-t5 .dashbox:focus{background:#fdfff9}
   #view-t5 .q1 .qrow,#view-t5 .q1 .dashbox{margin-left:36px}
   #view-t5 .lines5{display:flex;flex-direction:column;gap:13px;margin:6px 6px 2px 4px}
   #view-t5 .line5{display:flex;align-items:flex-start;gap:8px}
@@ -233,7 +228,6 @@
   #view-t5 .msg5 p{margin:6px 0 0;font-size:11px;color:#4c6b45}
   #view-t5 .talk5{flex:1;display:flex;justify-content:center}
   #view-t5 .talk5 svg{width:210px;height:80px}
-  /* ---------- PORTADA ---------- */
   .home{max-width:1250px;margin:0 auto;background:#f8f2e4;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.12);overflow:hidden;padding:26px 34px 0;position:relative}
   .home-top{display:grid;grid-template-columns:1fr 470px;gap:10px;align-items:start}
   .home-logo{width:165px;height:auto;display:block;margin:0 0 12px 4px}
@@ -264,10 +258,8 @@
   .fc-div{height:16px;max-width:360px;margin:0 auto 12px}
   .fc-text{font-size:13px;color:#4a4a4a;max-width:660px;margin:0 auto 18px;line-height:1.55}
   .open-btn{background:#2e5e2a;color:#fff;font-family:'Nunito';font-weight:800;font-size:15px;border:none;border-radius:10px;padding:12px 32px;cursor:pointer;display:inline-flex;align-items:center;gap:10px;box-shadow:0 4px 10px rgba(46,94,42,.35);transition:.2s}
-  .open-btn:hover{transform:translateY(-2px);background:#24511f}
   .home-diamonds{height:16px;width:62%;margin:0 auto 4px}
   .home-wave{display:block;width:calc(100% + 68px);margin-left:-34px;height:110px}
-  /* ---------- TEJIDO ---------- */
   .tej-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 4px 14px}
   .tej-logo{width:150px;height:auto}
   .tej-back{font-family:'Oswald';color:#2e5e2a;letter-spacing:1px;font-size:15px;background:none;border:none;border-bottom:3px solid #2e5e2a;border-radius:2px;padding:0 26px 6px;cursor:pointer}
@@ -289,8 +281,6 @@
   .ruta .rdiv{height:14px;max-width:230px;margin:6px 0}
   .ruta p{font-size:11.8px;color:#4a4a4a;line-height:1.5;margin:6px 0 12px}
   .ruta-btn{background:var(--rc);color:#fff;font-family:'Nunito';font-weight:800;font-size:14px;border:none;border-radius:9px;padding:10px 28px;cursor:pointer;transition:.2s}
-  .ruta-btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
-  /* ---------- RUTA DE MAPEO ---------- */
   .map-head{display:grid;grid-template-columns:230px 1fr 470px;gap:20px;align-items:center;padding:4px 0 16px}
   .map-folder{position:relative}
   .map-folder > svg{width:100%;height:auto;display:block}
@@ -321,7 +311,6 @@
   .t7icon svg{width:64px;height:64px}
   .t7 p{font-size:11.5px;color:#4a4a4a;line-height:1.5;margin:0 0 12px}
   .t7btn{display:block;width:100%;background:var(--tc);color:#fff;border:none;border-radius:8px;padding:9px 0;font-weight:800;font-size:12.5px;cursor:pointer;font-family:'Nunito'}
-  .t7btn:hover{filter:brightness(1.1)}
   .t7dl{display:flex;gap:7px;justify-content:center;align-items:center;background:none;border:none;margin:9px auto 0;font-weight:800;font-size:12px;color:#333;cursor:pointer;font-family:'Nunito'}
   [contenteditable]:empty:before{content:attr(data-ph);color:#b9b19f}
   @media print{
@@ -348,6 +337,7 @@
     <circle cx="20" cy="7" r="3.2" fill="var(--c3,var(--c1))"/><circle cx="13" cy="14" r="2.4" fill="var(--c3,var(--c2))"/><circle cx="27" cy="14" r="2.4" fill="var(--c3,var(--c2))"/>
   </symbol>
   <symbol id="zig" viewBox="0 0 64 10"><path d="M0 8 L5 2 L10 8 L15 2 L20 8 L25 2 L30 8 L35 2 L40 8 L45 2 L50 8 L55 2 L60 8 L64 3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></symbol>
   <symbol id="ppl" viewBox="0 0 74 46"><g fill="none" stroke="#8c3b1f" stroke-width="2" stroke-linecap="round"><circle cx="22" cy="12" r="6"/><path d="M9 36 q13 -16 26 0"/><circle cx="44" cy="10" r="6"/><path d="M31 34 q13 -16 26 0"/><circle cx="61" cy="15" r="5"/><path d="M50 37 q11 -14 22 0"/></g></symbol>
   <symbol id="mandala" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#8c2f26"/><circle cx="30" cy="30" r="24" fill="none" stroke="#f3e2c2" stroke-width="2" stroke-dasharray="4 4"/><circle cx="30" cy="30" r="20" fill="#e9a63a"/><circle cx="30" cy="30" r="13" fill="#c0392b"/><circle cx="30" cy="30" r="6" fill="#f3e2c2"/></symbol>
   <symbol id="folder" viewBox="0 0 200 160"><path d="M18 16 h62 l10 12 h92 v116 H18 z" fill="currentColor" opacity=".72"/><rect x="10" y="36" width="180" height="116" rx="9" fill="currentColor"/><rect x="22" y="48" width="156" height="92" rx="6" fill="none" stroke="#f6efe0" stroke-width="2.5" stroke-dasharray="7 6" opacity=".85"/></symbol>
@@ -505,7 +495,6 @@
     <svg class="home-wave" viewBox="0 0 1250 110" preserveAspectRatio="none"><use href="#wave"/></svg>
   </div>
 </div>
-
 <!-- HERRAMIENTA 1 -->
 <div id="view-t1" class="view hidden">
   <div class="toolbar"><button class="tb-back" onclick="showView('mapeo')">⬅ Volver a Ruta de Mapeo</button><button class="tb-pdf" onclick="window.print()">🖨️ PDF</button><button class="tb-png" onclick="exportPNG('sheet1','Herramienta1_Lienzo')">🖼️ PNG</button><button class="tb-clear" onclick="limpiar('view-t1')">🧹 Limpiar</button></div>
@@ -562,19 +551,19 @@
         <div class="chead cg"><div class="cic"><svg viewBox="0 0 40 40" fill="#fff"><circle cx="20" cy="11" r="5.5"/><path d="M20 18c-6 0-10 4.5-10 9h20c0-4.5-4-9-10-9z"/><circle cx="8.5" cy="14" r="4"/><path d="M8.5 19c-4 0-6.5 3-6.5 6h9c0-2.5-1-4.6-2.5-6z"/><circle cx="31.5" cy="14" r="4"/><path d="M31.5 19c-1.5 1.4-2.5 3.5-2.5 6h9c0-3-2.5-6-6.5-6z"/></svg></div><div><p class="ct">Si queremos…</p><p class="cq">¿Qué queremos comprender o resolver?</p></div></div>
         <div class="chead co"><div class="cic"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><circle cx="20" cy="20" r="12"/><path d="M16 16 c0-4 8-4 8 0 c0 3-4 3-4 6"/><circle cx="20" cy="26" r="1.6" fill="#fff"/></svg></div><div><p class="ct">Podemos preguntar…:</p><p class="cq">¿Qué pregunta nos ayudará a conocer esa información?</p></div></div>
         <div class="chead cb"><div class="cic"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="7" width="20" height="27" rx="3"/><rect x="16" y="4" width="8" height="5" rx="1.5"/><path d="M14 15 h12 M14 21 h12 M14 27 h8"/></svg></div><div><p class="ct">¿Cómo responderemos esta pregunta?</p><p class="cq">¿Qué tipo de respuesta es la más adecuada?</p></div></div>
-        <div class="row cg"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
+        <div class="row cg"><svg class="zd"><use href="#zd"/></svg><div class="cell" contenteditable="true"></div></div>
         <div class="row co"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
         <div class="row cb"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-        <div class="row cg"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
+        <div class="row cg"><svg class="zd"><use href="#zd"/></svg><div class="cell" contenteditable="true"></div></div>
         <div class="row co"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
         <div class="row cb"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-        <div class="row cg"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
+        <div class="row cg"><svg class="zd"><use href="#zd"/></svg><div class="cell" contenteditable="true"></div></div>
         <div class="row co"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
         <div class="row cb"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-        <div class="row cg"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
+        <div class="row cg"><svg class="zd"><use href="#zd"/></svg><div class="cell" contenteditable="true"></div></div>
         <div class="row co"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
         <div class="row cb"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-        <div class="row cg"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
+        <div class="row cg"><svg class="zd"><use href="#zd"/></svg><div class="cell" contenteditable="true"></div></div>
         <div class="row co"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
         <div class="row cb"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
       </div>
@@ -589,7 +578,6 @@
     <div class="t2band dband"></div>
   </div>
 </div>
-
 <!-- HERRAMIENTA 3: VIDEO -->
 <div id="view-t3" class="view hidden">
   <div class="video-wrap">
@@ -605,7 +593,7 @@
 <!-- HERRAMIENTA 4 -->
 <div id="view-t4" class="view hidden">
   <div class="toolbar"><button class="tb-back" onclick="showView('mapeo')">⬅ Volver a Ruta de Mapeo</button><button class="tb-pdf" onclick="window.print()">🖨️ PDF</button><button class="tb-png" onclick="exportPNG('sheet4','Herramienta4_Planificacion')">🖼️ PNG</button><button class="tb-clear" onclick="limpiar('view-t4')">🧹 Limpiar</button></div>
-  <p class="hint">✏️ Haz clic en las celdas para escribir · ✅ marca las casillas de seguimiento.</p>
+  <p class="hint">✏️ Escribe en Organización y Observaciones · en Estado y Seguimiento solo selecciona P/E/C/R.</p>
   <div class="sheet" id="sheet4">
     <header>
       <div class="logo-pawanka"><svg viewBox="0 0 100 100"><use href="#pawlogo"/></svg><div class="n1">PAWANKA</div><div class="n2">FUND</div></div>
@@ -644,12 +632,12 @@
           <th style="background:#7a8f3a"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><rect x="7" y="10" width="26" height="16" rx="6"/><path d="M14 26 l-3 6 8 -6"/><circle cx="14" cy="18" r="1.4" fill="#fff"/><circle cx="20" cy="18" r="1.4" fill="#fff"/><circle cx="26" cy="18" r="1.4" fill="#fff"/></svg>Observaciones</th>
         </tr></thead>
         <tbody>
-          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
-          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
-          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
-          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
-          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
-          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td class="ckc sel"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td class="ckc sel"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td class="ckc sel"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td class="ckc sel"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td class="ckc sel"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td class="ckc sel"></td><td contenteditable="true"></td></tr>
         </tbody>
       </table>
     </div>
@@ -677,10 +665,10 @@
           <th style="background:#7a8f3a"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><rect x="7" y="10" width="26" height="16" rx="6"/><path d="M14 26 l-3 6 8 -6"/><circle cx="14" cy="18" r="1.4" fill="#fff"/><circle cx="20" cy="18" r="1.4" fill="#fff"/><circle cx="26" cy="18" r="1.4" fill="#fff"/></svg>Observaciones</th>
         </tr></thead>
         <tbody>
-          <tr><td contenteditable="true"></td><td class="ckc"><input type="checkbox" class="ck-o"></td><td class="ckc"><input type="checkbox" class="ck-p"></td><td class="ckc"><input type="checkbox" class="ck-t"></td><td class="ckc"><input type="checkbox" class="ck-b"></td><td contenteditable="true"></td></tr>
-          <tr><td contenteditable="true"></td><td class="ckc"><input type="checkbox" class="ck-o"></td><td class="ckc"><input type="checkbox" class="ck-p"></td><td class="ckc"><input type="checkbox" class="ck-t"></td><td class="ckc"><input type="checkbox" class="ck-b"></td><td contenteditable="true"></td></tr>
-          <tr><td contenteditable="true"></td><td class="ckc"><input type="checkbox" class="ck-o"></td><td class="ckc"><input type="checkbox" class="ck-p"></td><td class="ckc"><input type="checkbox" class="ck-t"></td><td class="ckc"><input type="checkbox" class="ck-b"></td><td contenteditable="true"></td></tr>
-          <tr><td contenteditable="true"></td><td class="ckc"><input type="checkbox" class="ck-o"></td><td class="ckc"><input type="checkbox" class="ck-p"></td><td class="ckc"><input type="checkbox" class="ck-t"></td><td class="ckc"><input type="checkbox" class="ck-b"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td class="ckc sel"></td><td class="ckc sel"></td><td class="ckc sel"></td><td class="ckc sel"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td class="ckc sel"></td><td class="ckc sel"></td><td class="ckc sel"></td><td class="ckc sel"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td class="ckc sel"></td><td class="ckc sel"></td><td class="ckc sel"></td><td class="ckc sel"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td class="ckc sel"></td><td class="ckc sel"></td><td class="ckc sel"></td><td class="ckc sel"></td><td contenteditable="true"></td></tr>
         </tbody>
       </table>
     </div>
@@ -834,7 +822,15 @@ function limpiar(viewId){
   const v=document.getElementById(viewId);
   v.querySelectorAll('[contenteditable]').forEach(e=>e.innerHTML='');
   v.querySelectorAll('input[type=checkbox]').forEach(c=>c.checked=false);
+  v.querySelectorAll('select').forEach(s=>{s.value='';s.setAttribute('data-v','');});
 }
+function pintarEstado(sel){
+  sel.setAttribute('data-v',sel.value);
+}
+// Crea los desplegables P/E/C/R en las celdas marcadas con class="sel"
+document.querySelectorAll('#view-t4 td.sel').forEach(td=>{
+  td.innerHTML='<select class="sel-estado" data-v="" onchange="pintarEstado(this)"><option value=""></option><option value="P">P</option><option value="E">E</option><option value="C">C</option><option value="R">R</option></select>';
+});
 </script>
 </body>
 </html>
