@@ -21,16 +21,27 @@
   .hint{text-align:center;font-size:12px;color:#777;margin:-6px 0 12px}
   .sheet{width:100%;max-width:860px;margin:0 auto;background:#fff;border:1px solid #e2dccf;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);overflow:hidden}
   .triangles{height:12px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'><polygon points='0,12 10,0 20,12' fill='%23d94a38'/><polygon points='20,12 30,0 40,12' fill='%23f2a33c'/><polygon points='40,12 50,0 60,12' fill='%237ab648'/><polygon points='60,12 70,0 80,12' fill='%232e6db4'/><polygon points='80,12 90,0 100,12' fill='%23a2499a'/><polygon points='100,12 110,0 120,12' fill='%23e9c53a'/></svg>") repeat-x center}
+  .dband{background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='16' viewBox='0 0 160 16'><polygon points='10,3 16,8 10,13 4,8' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><circle cx='26' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='42,3 48,8 42,13 36,8' fill='none' stroke='%23d95f18' stroke-width='1.6'/><circle cx='58' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='74,3 80,8 74,13 68,8' fill='none' stroke='%237d3f98' stroke-width='1.6'/><circle cx='90' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='106,3 112,8 106,13 100,8' fill='none' stroke='%231f6f8f' stroke-width='1.6'/><circle cx='122' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='138,3 144,8 138,13 132,8' fill='none' stroke='%23d9a03a' stroke-width='1.6'/><circle cx='154' cy='8' r='1.6' fill='%235b3a1e'/></svg>") repeat-x center}
   .title-row{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
   .title-logo{width:62px;height:auto;object-fit:contain}
   .ncard,.nbox,.mcard,.t7,.ruta,.feat,.home-left,.home-basket,.fc-left,.fc-right,.map-titles{min-width:0}
-  .write,.writebox,.write2,#view-t6 td[contenteditable],#view-t2 .cell,#view-t5 .write5,#view-t5 .dashbox{white-space:pre-wrap;overflow-wrap:break-word;word-break:break-word;min-width:0;max-width:100%;overflow-x:hidden}
+  .write,.writebox,.write2,#view-t6 td[contenteditable],#view-t2 .cell,#view-t5 .write5,#view-t5 .dashbox,#view-t4 td[contenteditable]{white-space:pre-wrap;overflow-wrap:break-word;word-break:break-word;min-width:0;max-width:100%;overflow-x:hidden}
+  .logo-pawanka{text-align:center}
+  .logo-pawanka .n1{font-weight:800;letter-spacing:2px;font-size:13px;color:#222}
+  .logo-pawanka .n2{font-size:10px;letter-spacing:4px;color:#666;font-weight:700}
+  .logo-lan{text-align:center;width:120px}
+  .logo-lan .lan{font-family:'Oswald';font-weight:700;font-size:24px;color:#173a5e;letter-spacing:2px}
+  .logo-lan .paw{font-size:11px;letter-spacing:5px;color:#173a5e;font-weight:700}
+  /* ---------- RUTA AUTOEVALUACIÓN (IFRAME) ---------- */
+  .autoeval-frame{width:100%;height:calc(100vh - 180px);min-height:600px;border:none;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.18);background:#fff;display:block;margin:0 auto}
+  .autoeval-wrap{max-width:1250px;margin:0 auto;padding:20px 12px}
+  .autoeval-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+  .autoeval-head h1{font-family:'Oswald';color:#2e5e2a;font-size:32px;letter-spacing:1px;margin:0;text-transform:uppercase}
+  .autoeval-head .autoeval-back{font-family:'Oswald';color:#2e5e2a;letter-spacing:1px;font-size:15px;background:none;border:none;border-bottom:3px solid #2e5e2a;border-radius:2px;padding:0 26px 6px;cursor:pointer}
+  .autoeval-head .autoeval-back:hover{color:#24511f}
   /* ---------- HERRAMIENTA 6 ---------- */
   #view-t6 header{display:grid;grid-template-columns:120px 1fr 120px;align-items:center;padding:18px 18px 6px}
-  #view-t6 .logo-pawanka{text-align:center}
   #view-t6 .logo-pawanka svg{width:78px;height:78px}
-  #view-t6 .logo-pawanka .n1{font-weight:800;letter-spacing:2px;font-size:13px;color:#222}
-  #view-t6 .logo-pawanka .n2{font-size:10px;letter-spacing:4px;color:#666;font-weight:700}
   #view-t6 .head-center{text-align:center}
   #view-t6 .banner{display:inline-block;background:#9c3f8f;color:#fff;font-family:'Oswald';font-size:15px;letter-spacing:2px;padding:5px 34px;border-radius:6px;transform:rotate(-.6deg)}
   #view-t6 h1{font-family:'Oswald';color:#14532d;font-size:34px;letter-spacing:1px;margin:8px 0 4px;text-transform:uppercase}
@@ -50,7 +61,6 @@
   #view-t6 .line{display:flex;align-items:flex-start;gap:8px}
   #view-t6 .dot{width:7px;height:7px;border-radius:50%;background:var(--tt);flex:none;margin-top:6px}
   #view-t6 .write{flex:1;min-height:18px;border-bottom:1.6px solid var(--ln);font-size:12.5px;color:#222;outline:none;line-height:1.25}
-  #view-t6 .write:focus{border-bottom-color:var(--tt)}
   #view-t6 .branch{position:absolute;width:36px;height:112px;left:7px;bottom:10px;--stem:#7a5231}
   #view-t6 .card.right .branch{left:auto;right:7px;transform:scaleX(-1)}
   #view-t6 .decisions{margin:4px 18px 14px;background:#f8ead6;border:1.6px solid #d8b28c;border-radius:14px;padding:12px 16px 16px}
@@ -71,15 +81,9 @@
   #view-t6 .msg p{margin:6px 0 0;font-size:11px;color:#4c6b45;font-style:italic}
   #view-t6 .foot-art{flex:1;display:flex;justify-content:center}
   #view-t6 .foot-art svg{width:230px;height:72px}
-  #view-t6 .logo-lan{text-align:center;width:120px}
-  #view-t6 .logo-lan .lan{font-family:'Oswald';font-weight:700;font-size:24px;color:#173a5e;letter-spacing:2px}
-  #view-t6 .logo-lan .paw{font-size:11px;letter-spacing:5px;color:#173a5e;font-weight:700}
   /* ---------- HERRAMIENTA 1 ---------- */
   #view-t1 header{display:grid;grid-template-columns:110px 1fr 110px;align-items:center;padding:18px 18px 4px}
-  #view-t1 .logo-pawanka{text-align:center}
   #view-t1 .logo-pawanka svg{width:74px;height:74px}
-  #view-t1 .logo-pawanka .n1{font-weight:800;letter-spacing:2px;font-size:13px;color:#222}
-  #view-t1 .logo-pawanka .n2{font-size:10px;letter-spacing:4px;color:#666;font-weight:700}
   #view-t1 .head-center{text-align:center}
   #view-t1 .h-small{font-family:'Oswald';color:#14532d;font-size:18px;letter-spacing:1px;margin:0}
   #view-t1 h1{font-family:'Oswald';color:#8c2f26;font-size:27px;letter-spacing:.5px;margin:2px 0 6px;text-transform:uppercase}
@@ -116,12 +120,9 @@
   #view-t1 .nstrip{background:#8c2f26;color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 14px;font-family:'Oswald';letter-spacing:1.5px;font-size:13px}
   #view-t1 .nstrip .d{color:#e9a63a}
   #view-t1 .nstrip .lanw{font-family:'Oswald';font-weight:700;color:#fff;letter-spacing:1px;font-size:13px;text-align:right;line-height:1.1}
-  /* ---------- HERRAMIENTA 2 ---------- */
+  /* ---------- HERRAMIENTA 2 (FILAS COMPARTIDAS) ---------- */
   #view-t2 header{display:grid;grid-template-columns:110px 1fr 120px;align-items:center;padding:18px 18px 4px}
-  #view-t2 .logo-pawanka{text-align:center}
   #view-t2 .logo-pawanka svg{width:74px;height:74px}
-  #view-t2 .logo-pawanka .n1{font-weight:800;letter-spacing:2px;font-size:13px;color:#222}
-  #view-t2 .logo-pawanka .n2{font-size:10px;letter-spacing:4px;color:#666;font-weight:700}
   #view-t2 .head-center{text-align:center}
   #view-t2 .h-small{font-family:'Oswald';color:#14532d;font-size:18px;letter-spacing:1px;margin:0}
   #view-t2 h1{font-family:'Oswald';color:#8c2f26;font-size:30px;letter-spacing:.5px;margin:2px 0 6px;text-transform:uppercase}
@@ -132,18 +133,17 @@
   #view-t2 .plant{width:88px;height:112px;display:block;margin:0 auto}
   #view-t2 .t2wrap{padding:12px 18px 6px}
   #view-t2 .t2{display:grid;grid-template-columns:1fr 1fr 1fr;border:1.6px solid #d8cbb6;border-radius:12px;overflow:hidden;background:#fff}
-  #view-t2 .col{display:flex;flex-direction:column;min-width:0}
-  #view-t2 .col + .col{border-left:1.6px solid #d8cbb6}
   #view-t2 .cg{--bc:#2e7d4f;--bg:#eef7ee;--lc:#cfe3cf}
   #view-t2 .co{--bc:#e2571e;--bg:#fdf3e6;--lc:#f5d8bd}
   #view-t2 .cb{--bc:#1f6fb2;--bg:#ecf3f9;--lc:#cfe0ee}
+  #view-t2 .t2 > *:not(:nth-child(3n+1)){border-left:1.6px solid #d8cbb6}
+  #view-t2 .t2 > *:nth-last-child(-n+3){border-bottom:none}
   #view-t2 .chead{background:var(--bg);border-bottom:1.6px solid var(--bc);padding:10px 12px;display:flex;gap:10px;align-items:flex-start}
   #view-t2 .cic{width:40px;height:40px;border-radius:50%;background:var(--bc);flex:none;display:flex;align-items:center;justify-content:center}
   #view-t2 .cic svg{width:22px;height:22px}
   #view-t2 .ct{font-weight:800;font-size:13.5px;color:var(--bc);margin:0}
   #view-t2 .cq{font-size:10.5px;color:#666;margin:2px 0 0;line-height:1.35}
-  #view-t2 .row{flex:1;display:flex;gap:8px;padding:10px 12px;border-bottom:1.4px solid var(--lc);min-height:52px;align-items:flex-start}
-  #view-t2 .row:last-child{border-bottom:none}
+  #view-t2 .row{display:flex;gap:8px;padding:10px 12px;border-bottom:1.4px solid var(--lc);min-height:52px;align-items:flex-start}
   #view-t2 .zd{width:10px;height:40px;color:var(--bc);flex:none;opacity:.8}
   #view-t2 .dot2{width:7px;height:7px;border-radius:50%;background:var(--bc);flex:none;margin-top:5px}
   #view-t2 .cell{flex:1;min-width:0;min-height:36px;font-size:12px;color:#222;outline:none}
@@ -152,13 +152,45 @@
   #view-t2 .lan2{text-align:right}
   #view-t2 .lan2 .lan{font-family:'Oswald';font-weight:700;font-size:22px;color:#173a5e;letter-spacing:2px}
   #view-t2 .lan2 .paw2{font-size:10px;color:#666;font-style:italic}
-  #view-t2 .t2band{height:24px;margin-top:8px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='16' viewBox='0 0 160 16'><polygon points='10,3 16,8 10,13 4,8' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><circle cx='26' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='42,3 48,8 42,13 36,8' fill='none' stroke='%23d95f18' stroke-width='1.6'/><circle cx='58' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='74,3 80,8 74,13 68,8' fill='none' stroke='%237d3f98' stroke-width='1.6'/><circle cx='90' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='106,3 112,8 106,13 100,8' fill='none' stroke='%231f6f8f' stroke-width='1.6'/><circle cx='122' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='138,3 144,8 138,13 132,8' fill='none' stroke='%23d9a03a' stroke-width='1.6'/><circle cx='154' cy='8' r='1.6' fill='%235b3a1e'/></svg>") repeat-x center}
+  #view-t2 .t2band{height:24px;margin-top:8px}
+  /* ---------- HERRAMIENTA 4 ---------- */
+  #view-t4 header{display:grid;grid-template-columns:110px 1fr 210px;align-items:center;padding:16px 18px 4px}
+  #view-t4 .logo-pawanka svg{width:66px;height:66px}
+  #view-t4 .head-center{text-align:center}
+  #view-t4 h1{font-family:'Oswald';color:#2e5e2a;font-size:25px;letter-spacing:.5px;margin:0;text-transform:uppercase;line-height:1.15}
+  #view-t4 .sub{font-size:12.5px;color:#444;max-width:560px;margin:6px auto 4px}
+  #view-t4 .h4art svg{width:100%;height:auto;display:block}
+  #view-t4 .t4wrap{padding:6px 18px 4px}
+  #view-t4 table{width:100%;border-collapse:collapse;table-layout:fixed}
+  #view-t4 th{color:#fff;font-size:11.5px;font-weight:800;padding:8px 6px;vertical-align:top;line-height:1.3;border:1px solid rgba(255,255,255,.25)}
+  #view-t4 th svg{width:26px;height:26px;display:block;margin:0 auto 6px}
+  #view-t4 th .leg{font-weight:600;font-size:9.5px;display:block;margin-top:5px;text-align:left;line-height:1.4}
+  #view-t4 td{border:1px solid #d8cbb6;background:#f7f5f0;height:34px;padding:4px 8px;font-size:11.5px;outline:none;vertical-align:middle}
+  #view-t4 td:focus{background:#fff}
+  #view-t4 td.ckc{text-align:center}
+  #view-t4 .ck-o{accent-color:#d95f18;width:15px;height:15px}
+  #view-t4 .ck-p{accent-color:#7d3f98;width:15px;height:15px}
+  #view-t4 .ck-t{accent-color:#17718f;width:15px;height:15px}
+  #view-t4 .ck-b{accent-color:#b06a2a;width:15px;height:15px}
+  #view-t4 .seg-head{display:flex;align-items:center;gap:14px;padding:16px 18px 8px}
+  #view-t4 .seg-ic{width:56px;height:56px;border:2.5px solid #d9a03a;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;background:#fffdf6}
+  #view-t4 .seg-ic svg{width:30px;height:30px}
+  #view-t4 .seg-title{flex:none}
+  #view-t4 .seg-title h2{font-family:'Oswald';color:#2e5e2a;font-size:23px;letter-spacing:1px;margin:0;text-transform:uppercase}
+  #view-t4 .seg-title .uline{height:5px;background:#7a8f3a;border-radius:4px;margin-top:4px;transform:rotate(-.6deg)}
+  #view-t4 .seg-head p{font-size:11.5px;color:#444;margin:0 auto;max-width:430px;text-align:center}
+  #view-t4 .seg-leaf{width:130px;flex:none}
+  #view-t4 .estados{margin:12px 18px 14px;background:#f3ece1;border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  #view-t4 .estados .lab{font-weight:800;color:#2e5e2a;font-size:12px}
+  #view-t4 .st{width:26px;height:26px;border-radius:50%;color:#fff;font-weight:800;display:inline-flex;align-items:center;justify-content:center;font-size:12px;flex:none}
+  #view-t4 .est{display:flex;align-items:center;gap:6px;font-size:11.5px;color:#444}
+  #view-t4 .est-note{margin-left:auto;display:flex;gap:8px;align-items:center;font-size:10.5px;color:#444;max-width:340px}
+  #view-t4 .est-note svg{width:30px;height:26px;flex:none}
+  #view-t4 .f4{display:flex;justify-content:flex-end;padding:0 22px 14px}
+  #view-t4 .f4 .logo-lan{text-align:right}
   /* ---------- HERRAMIENTA 5 ---------- */
   #view-t5 header{display:grid;grid-template-columns:110px 1fr 130px;align-items:center;padding:18px 18px 6px}
-  #view-t5 .logo-pawanka{text-align:center}
   #view-t5 .logo-pawanka svg{width:74px;height:74px}
-  #view-t5 .logo-pawanka .n1{font-weight:800;letter-spacing:2px;font-size:13px;color:#222}
-  #view-t5 .logo-pawanka .n2{font-size:10px;letter-spacing:4px;color:#666;font-weight:700}
   #view-t5 .head-center{text-align:center}
   #view-t5 .banner5{display:inline-block;background:#9c3f8f;color:#fff;font-family:'Oswald';font-size:14px;letter-spacing:2px;padding:4px 28px;border-radius:6px;transform:rotate(-.6deg)}
   #view-t5 h1{font-family:'Oswald';color:#2e5e2a;font-size:30px;letter-spacing:.5px;margin:8px 0 4px;text-transform:uppercase}
@@ -186,7 +218,6 @@
   #view-t5 .line5{display:flex;align-items:flex-start;gap:8px}
   #view-t5 .dot5{width:7px;height:7px;border-radius:50%;background:var(--tt);margin-top:5px;flex:none}
   #view-t5 .write5{flex:1;min-width:0;min-height:18px;border-bottom:1.6px solid var(--ln);outline:none;font-size:12px}
-  #view-t5 .write5:focus{border-bottom-color:var(--tt)}
   #view-t5 .branch5{position:absolute;left:6px;bottom:8px;width:30px;height:86px;--stem:#7a5231}
   #view-t5 footer{display:flex;align-items:center;gap:12px;padding:6px 18px 12px}
   #view-t5 .msg5{flex:1;background:#f0f7e8;border:1.4px solid #bcd8a8;border-radius:10px;padding:8px 12px}
@@ -194,17 +225,15 @@
   #view-t5 .msg5 p{margin:6px 0 0;font-size:11px;color:#4c6b45}
   #view-t5 .talk5{flex:1;display:flex;justify-content:center}
   #view-t5 .talk5 svg{width:210px;height:80px}
-  #view-t5 .logo-lan{text-align:center;width:120px}
-  #view-t5 .logo-lan .lan{font-family:'Oswald';font-weight:700;font-size:24px;color:#173a5e;letter-spacing:2px}
-  #view-t5 .logo-lan .paw{font-size:11px;letter-spacing:5px;color:#173a5e;font-weight:700}
-  /* ---------- PORTADA / CONTENEDOR ---------- */
+  /* ---------- PORTADA ---------- */
   .home{max-width:1250px;margin:0 auto;background:#f8f2e4;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.12);overflow:hidden;padding:26px 34px 0;position:relative}
   .home-top{display:grid;grid-template-columns:1fr 470px;gap:10px;align-items:start}
-  .home-logo{width:120px;height:auto;display:block;margin:0 0 10px 4px}
+  .home-logo{width:165px;height:auto;display:block;margin:0 0 12px 4px}
+  .home-logo2{width:110px;height:auto;display:block;margin:0 0 10px 140px}
   .home-titles{text-align:center}
   .home-kicker{font-family:'Oswald';color:#5b3a1e;font-size:28px;letter-spacing:1px;margin:0}
   .home-title{font-family:'Oswald';color:#2e5e2a;font-size:62px;letter-spacing:2px;margin:0 0 8px;font-weight:700}
-  .home-div{height:16px;max-width:560px;margin:0 auto;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='16' viewBox='0 0 160 16'><polygon points='10,3 16,8 10,13 4,8' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><circle cx='26' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='42,3 48,8 42,13 36,8' fill='none' stroke='%23d95f18' stroke-width='1.6'/><circle cx='58' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='74,3 80,8 74,13 68,8' fill='none' stroke='%237d3f98' stroke-width='1.6'/><circle cx='90' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='106,3 112,8 106,13 100,8' fill='none' stroke='%231f6f8f' stroke-width='1.6'/><circle cx='122' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='138,3 144,8 138,13 132,8' fill='none' stroke='%23d9a03a' stroke-width='1.6'/><circle cx='154' cy='8' r='1.6' fill='%235b3a1e'/></svg>") repeat-x center}
+  .home-div{height:16px;max-width:560px;margin:0 auto}
   .home-intro{font-size:15px;color:#4a4a4a;text-align:center;max-width:640px;margin:20px auto 24px;line-height:1.55}
   .home-feats{display:grid;grid-template-columns:repeat(4,1fr);max-width:920px;margin:0 auto 26px}
   .feat{padding:0 14px;text-align:center}
@@ -224,20 +253,17 @@
   .fc-title{font-family:'Oswald';color:#2e5e2a;font-size:30px;letter-spacing:1px;margin:0}
   .fc-title-row svg{width:46px;height:20px}
   .fc-sub{font-size:15px;color:#5b3a1e;margin:8px auto 10px;max-width:560px;line-height:1.45}
-  .fc-div{height:16px;max-width:360px;margin:0 auto 12px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='16' viewBox='0 0 160 16'><polygon points='10,3 16,8 10,13 4,8' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><circle cx='26' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='42,3 48,8 42,13 36,8' fill='none' stroke='%23d95f18' stroke-width='1.6'/><circle cx='58' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='74,3 80,8 74,13 68,8' fill='none' stroke='%237d3f98' stroke-width='1.6'/><circle cx='90' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='106,3 112,8 106,13 100,8' fill='none' stroke='%231f6f8f' stroke-width='1.6'/><circle cx='122' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='138,3 144,8 138,13 132,8' fill='none' stroke='%23d9a03a' stroke-width='1.6'/><circle cx='154' cy='8' r='1.6' fill='%235b3a1e'/></svg>") repeat-x center}
+  .fc-div{height:16px;max-width:360px;margin:0 auto 12px}
   .fc-text{font-size:13px;color:#4a4a4a;max-width:660px;margin:0 auto 18px;line-height:1.55}
   .open-btn{background:#2e5e2a;color:#fff;font-family:'Nunito';font-weight:800;font-size:15px;border:none;border-radius:10px;padding:12px 32px;cursor:pointer;display:inline-flex;align-items:center;gap:10px;box-shadow:0 4px 10px rgba(46,94,42,.35);transition:.2s}
   .open-btn:hover{transform:translateY(-2px);background:#24511f}
-  .home-diamonds{height:16px;width:62%;margin:0 auto 4px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='16' viewBox='0 0 160 16'><polygon points='10,3 16,8 10,13 4,8' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><circle cx='26' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='42,3 48,8 42,13 36,8' fill='none' stroke='%23d95f18' stroke-width='1.6'/><circle cx='58' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='74,3 80,8 74,13 68,8' fill='none' stroke='%237d3f98' stroke-width='1.6'/><circle cx='90' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='106,3 112,8 106,13 100,8' fill='none' stroke='%231f6f8f' stroke-width='1.6'/><circle cx='122' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='138,3 144,8 138,13 132,8' fill='none' stroke='%23d9a03a' stroke-width='1.6'/><circle cx='154' cy='8' r='1.6' fill='%235b3a1e'/></svg>") repeat-x center}
+  .home-diamonds{height:16px;width:62%;margin:0 auto 4px}
   .home-wave{display:block;width:calc(100% + 68px);margin-left:-34px;height:110px}
   /* ---------- TEJIDO ---------- */
   .tej-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 4px 14px}
   .tej-logo{width:150px;height:auto}
   .tej-back{font-family:'Oswald';color:#2e5e2a;letter-spacing:1px;font-size:15px;background:none;border:none;border-bottom:3px solid #2e5e2a;border-radius:2px;padding:0 26px 6px;cursor:pointer}
-  .tej-back:hover{color:#24511f}
-  .tej-dl{display:flex;gap:9px;align-items:center;border:1.6px solid #b7a88c;background:#fffdf6;border-radius:10px;padding:10px 18px;font-weight:800;font-size:13px;cursor:pointer;color:#333;font-family:'Nunito'}
-  .tej-dl:hover{background:#f6efdf}
-  .band-full{height:16px;margin:0 -34px 24px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='16' viewBox='0 0 160 16'><polygon points='10,3 16,8 10,13 4,8' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><circle cx='26' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='42,3 48,8 42,13 36,8' fill='none' stroke='%23d95f18' stroke-width='1.6'/><circle cx='58' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='74,3 80,8 74,13 68,8' fill='none' stroke='%237d3f98' stroke-width='1.6'/><circle cx='90' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='106,3 112,8 106,13 100,8' fill='none' stroke='%231f6f8f' stroke-width='1.6'/><circle cx='122' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='138,3 144,8 138,13 132,8' fill='none' stroke='%23d9a03a' stroke-width='1.6'/><circle cx='154' cy='8' r='1.6' fill='%235b3a1e'/></svg>") repeat-x center}
+  .band-full{height:16px;margin:0 -34px 24px}
   .tej-main{display:grid;grid-template-columns:1fr 520px;gap:24px;align-items:center}
   .tej-title-row h1{font-family:'Oswald';color:#2e5e2a;font-size:46px;letter-spacing:1px;margin:0}
   .tej-title-row svg{width:56px;height:24px}
@@ -252,7 +278,7 @@
   .ruta-branch{position:absolute;left:-12px;bottom:-14px;width:42px;height:86px;--stem:#7a5231;--c1:#8a5a2b;--c2:#b0763a;--c3:#7d3f98}
   .ruta h3{font-family:'Oswald';font-size:19px;letter-spacing:.5px;margin:0;color:var(--rc);text-transform:uppercase}
   .ruta .rsub{font-weight:800;font-size:13px;color:var(--rc);margin:4px 0 2px}
-  .ruta .rdiv{height:14px;max-width:230px;margin:6px 0;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='16' viewBox='0 0 160 16'><polygon points='10,3 16,8 10,13 4,8' fill='none' stroke='%232e5e2a' stroke-width='1.6'/><circle cx='26' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='42,3 48,8 42,13 36,8' fill='none' stroke='%23d95f18' stroke-width='1.6'/><circle cx='58' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='74,3 80,8 74,13 68,8' fill='none' stroke='%237d3f98' stroke-width='1.6'/><circle cx='90' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='106,3 112,8 106,13 100,8' fill='none' stroke='%231f6f8f' stroke-width='1.6'/><circle cx='122' cy='8' r='1.6' fill='%235b3a1e'/><polygon points='138,3 144,8 138,13 132,8' fill='none' stroke='%23d9a03a' stroke-width='1.6'/><circle cx='154' cy='8' r='1.6' fill='%235b3a1e'/></svg>") repeat-x center}
+  .ruta .rdiv{height:14px;max-width:230px;margin:6px 0}
   .ruta p{font-size:11.8px;color:#4a4a4a;line-height:1.5;margin:6px 0 12px}
   .ruta-btn{background:var(--rc);color:#fff;font-family:'Nunito';font-weight:800;font-size:14px;border:none;border-radius:9px;padding:10px 28px;cursor:pointer;transition:.2s}
   .ruta-btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
@@ -291,7 +317,7 @@
   .t7dl{display:flex;gap:7px;justify-content:center;align-items:center;background:none;border:none;margin:9px auto 0;font-weight:800;font-size:12px;color:#333;cursor:pointer;font-family:'Nunito'}
   [contenteditable]:empty:before{content:attr(data-ph);color:#b9b19f}
   @media print{
-    .toolbar,.hint,#view-home,#view-tejido,#view-mapeo{display:none !important}
+    .toolbar,.hint,#view-home,#view-tejido,#view-mapeo,#view-autoeval{display:none !important}
     body{background:#fff;padding:0}
     .sheet{width:100%;box-shadow:none;border:none;border-radius:0}
   }
@@ -305,16 +331,13 @@
     <pattern id="bw" width="46" height="44" patternUnits="userSpaceOnUse"><polygon points="23,6 36,22 23,38 10,22" fill="none" stroke="#7a4016" stroke-width="3"/><polygon points="23,14 29,22 23,30 17,22" fill="#d99a4a"/></pattern>
     <pattern id="wv" width="46" height="26" patternUnits="userSpaceOnUse"><rect width="46" height="26" fill="#234f21"/><polygon points="23,5 31,13 23,21 15,13" fill="none" stroke="#d99a4a" stroke-width="1.6"/></pattern>
   </defs>
+  <symbol id="pawlogo" viewBox="0 0 100 100"><path d="M50 50 L50 4 A46 46 0 0 0 4 50 Z" fill="#7ab648"/><path d="M50 50 L4 50 A46 46 0 0 0 50 96 Z" fill="#d94a38"/><path d="M50 50 L50 96 A46 46 0 0 0 96 50 Z" fill="#2e6db4"/><path d="M50 50 L96 50 A46 46 0 0 0 50 4 Z" fill="#f2a33c"/><rect x="35" y="35" width="30" height="30" fill="#a2499a"/><rect x="43" y="43" width="14" height="14" fill="#8fbc6a"/></symbol>
+  <symbol id="lanppl" viewBox="0 0 120 26"><g stroke-width="2.4" stroke-linecap="round" fill="none"><g stroke="#e67e22"><circle cx="30" cy="6" r="3.4" fill="#e67e22" stroke="none"/><line x1="30" y1="10" x2="30" y2="18"/><path d="M22 14 L30 11 L38 14"/></g><g stroke="#2980b9"><circle cx="48" cy="6" r="3.4" fill="#2980b9" stroke="none"/><line x1="48" y1="10" x2="48" y2="18"/><path d="M38 14 L48 11 L58 14"/></g><g stroke="#8e44ad"><circle cx="66" cy="6" r="3.4" fill="#8e44ad" stroke="none"/><line x1="66" y1="10" x2="66" y2="18"/><path d="M58 14 L66 11 L74 14"/></g><g stroke="#c0392b"><circle cx="84" cy="6" r="3.4" fill="#c0392b" stroke="none"/><line x1="84" y1="10" x2="84" y2="18"/><path d="M74 14 L84 11 L92 14"/></g></g></symbol>
+  <symbol id="divd" viewBox="0 0 320 14"><line x1="0" y1="7" x2="320" y2="7" stroke="#8c2f26" stroke-width="1.4"/><polygon points="40,1 46,7 40,13 34,7" fill="#c0392b"/><polygon points="106,1 112,7 106,13 100,7" fill="#1e7a3c"/><polygon points="160,0 167,7 160,14 153,7" fill="#e9a63a"/><polygon points="214,1 220,7 214,13 208,7" fill="#1e7a3c"/><polygon points="280,1 286,7 280,13 274,7" fill="#c0392b"/></symbol>
   <symbol id="branch" viewBox="0 0 40 110">
     <path d="M20 108 C 18 78 22 40 20 4" stroke="var(--stem)" stroke-width="2" fill="none"/>
-    <path d="M20 94 Q 6 90 2 76 Q 16 80 20 94" fill="var(--c1)"/>
-    <path d="M20 80 Q 34 76 38 62 Q 24 66 20 80" fill="var(--c2)"/>
-    <path d="M20 64 Q 6 60 2 46 Q 16 50 20 64" fill="var(--c2)"/>
-    <path d="M20 50 Q 34 46 38 32 Q 24 36 20 50" fill="var(--c1)"/>
-    <path d="M20 34 Q 8 30 5 18 Q 17 22 20 34" fill="var(--c1)"/>
-    <circle cx="20" cy="7" r="3.2" fill="var(--c3,var(--c1))"/>
-    <circle cx="13" cy="14" r="2.4" fill="var(--c3,var(--c2))"/>
-    <circle cx="27" cy="14" r="2.4" fill="var(--c3,var(--c2))"/>
+    <path d="M20 94 Q 6 90 2 76 Q 16 80 20 94" fill="var(--c1)"/><path d="M20 80 Q 34 76 38 62 Q 24 66 20 80" fill="var(--c2)"/><path d="M20 64 Q 6 60 2 46 Q 16 50 20 64" fill="var(--c2)"/><path d="M20 50 Q 34 46 38 32 Q 24 36 20 50" fill="var(--c1)"/><path d="M20 34 Q 8 30 5 18 Q 17 22 20 34" fill="var(--c1)"/>
+    <circle cx="20" cy="7" r="3.2" fill="var(--c3,var(--c1))"/><circle cx="13" cy="14" r="2.4" fill="var(--c3,var(--c2))"/><circle cx="27" cy="14" r="2.4" fill="var(--c3,var(--c2))"/>
   </symbol>
   <symbol id="zig" viewBox="0 0 64 10"><path d="M0 8 L5 2 L10 8 L15 2 L20 8 L25 2 L30 8 L35 2 L40 8 L45 2 L50 8 L55 2 L60 8 L64 3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
   <symbol id="ppl" viewBox="0 0 74 46"><g fill="none" stroke="#8c3b1f" stroke-width="2" stroke-linecap="round"><circle cx="22" cy="12" r="6"/><path d="M9 36 q13 -16 26 0"/><circle cx="44" cy="10" r="6"/><path d="M31 34 q13 -16 26 0"/><circle cx="61" cy="15" r="5"/><path d="M50 37 q11 -14 22 0"/></g></symbol>
@@ -344,7 +367,8 @@
     <div class="home-top">
       <div class="home-left">
         <img src="logopawanka.png" alt="Pawanka Fund" class="home-logo">
-        <div class="home-titles"><h2 class="home-kicker">CANASTO DE HERRAMIENTAS:</h2><h1 class="home-title">LAN PAWANKA</h1><div class="home-div"></div></div>
+        <img src="logolan.png" alt="LAN Pawanka" class="home-logo2">
+        <div class="home-titles"><h2 class="home-kicker">CANASTO DE HERRAMIENTAS:</h2><h1 class="home-title">LAN PAWANKA</h1><div class="home-div dband"></div></div>
         <p class="home-intro">Este es un espacio donde reunimos herramientas que vamos co-construyendo y aprendiendo junto con organizaciones y Pueblos Indígenas a través de nuestros procesos de acompañamiento.</p>
         <div class="home-feats">
           <div class="feat" style="--fc:#2e5e2a"><div class="feat-ic"><svg viewBox="0 0 40 40" fill="#2e5e2a"><circle cx="20" cy="11" r="5.5"/><path d="M20 18c-6 0-10 4.5-10 9h20c0-4.5-4-9-10-9z"/><circle cx="8.5" cy="14" r="4"/><path d="M8.5 19c-4 0-6.5 3-6.5 6h9c0-2.5-1-4.6-2.5-6z"/><circle cx="31.5" cy="14" r="4"/><path d="M31.5 19c-1.5 1.4-2.5 3.5-2.5 6h9c0-3-2.5-6-6.5-6z"/></svg></div><p>Aquí encontrarás herramientas prácticas para fortalecer tus procesos y capacidades.</p></div>
@@ -367,38 +391,36 @@
           <path d="M217 205 V158" stroke="#e8e2cf" stroke-width="3"/>
           <path d="M217 176 c0-12-8-17-16-17 0 12 8 17 16 17z" fill="#e8e2cf"/>
           <path d="M217 162 c0-10 7-14 14-14 0 10-7 14-14 14z" fill="#e8e2cf"/>
-          <polygon points="196,196 204,204 196,212 188,204" fill="#d99a4a"/>
-          <polygon points="238,196 246,204 238,212 230,204" fill="#d99a4a"/>
+          <polygon points="196,196 204,204 196,212 188,204" fill="#d99a4a"/><polygon points="238,196 246,204 238,212 230,204" fill="#d99a4a"/>
           <svg x="20" y="150" width="70" height="150" style="--stem:#7a5231;--c1:#3a7d44;--c2:#8fbc6a;--c3:#7d3f98"><use href="#branch"/></svg>
         </svg>
       </div>
       <div class="fc-right">
         <div class="fc-title-row"><svg><use href="#sprig"/></svg><h2 class="fc-title">TEJIDO ORGANIZATIVO</h2><svg style="transform:scaleX(-1)"><use href="#sprig"/></svg></div>
         <p class="fc-sub">Herramientas para conocernos, reconocer nuestro tejido y fortalecer nuestras capacidades.</p>
-        <div class="fc-div"></div>
+        <div class="fc-div dband"></div>
         <p class="fc-text">Esta carpeta reúne tres rutas de herramientas que nos ayudan a comprender quiénes somos, con quiénes caminamos, cuáles son nuestras capacidades y qué necesitamos fortalecer para seguir construyendo nuestro Buen Vivir.</p>
         <button class="open-btn" onclick="showView('tejido')">Abrir carpeta ❯</button>
       </div>
       <div class="side-pattern"></div>
     </section>
-    <div class="home-diamonds"></div>
+    <div class="home-diamonds dband"></div>
     <svg class="home-wave" viewBox="0 0 1250 110" preserveAspectRatio="none"><use href="#wave"/></svg>
   </div>
 </div>
 
-<!-- TEJIDO ORGANIZATIVO -->
+<!-- TEJIDO -->
 <div id="view-tejido" class="view hidden">
   <div class="home">
     <div class="tej-bar">
       <img src="logopawanka.png" alt="Pawanka Fund" class="tej-logo">
       <button class="tej-back" onclick="showView('home')">←&nbsp; CANASTO DE HERRAMIENTAS</button>
-      <button class="tej-dl" onclick="alert('📥 Aquí podrás enlazar tus archivos para descargar.')">⬇ Descargar recursos</button>
     </div>
-    <div class="band-full"></div>
+    <div class="band-full dband"></div>
     <div class="tej-main">
       <div>
         <div class="fc-title-row tej-title-row"><svg><use href="#sprig"/></svg><h1>TEJIDO ORGANIZATIVO</h1><svg style="transform:scaleX(-1)"><use href="#sprig"/></svg></div>
-        <div class="fc-div" style="max-width:300px;margin-top:10px"></div>
+        <div class="fc-div dband" style="max-width:300px;margin-top:10px"></div>
         <p class="tej-intro">Este conjunto de herramientas busca acompañar a las organizaciones de Pueblos Indígenas a conocerse mejor, comprender su estado actual, reconocer sus capacidades y fortalecer su trabajo colectivo.</p>
         <div class="home-banner" style="margin:0"><svg viewBox="0 0 40 110"><use href="#branch"/></svg><p>Cada ruta reúne herramientas prácticas que pueden adaptarse a tu realidad, tu territorio y tu forma de organización.</p></div>
       </div>
@@ -408,19 +430,30 @@
     <div class="rutas">
       <section class="ruta" style="--rc:#3f7a3a">
         <div class="ruta-folder"><svg viewBox="0 0 200 160" style="color:#3f7a3a"><use href="#folder"/><g stroke="#f6efe0" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="70" y="82" width="60" height="40" rx="4" stroke-dasharray="8 6"/><path d="M100 64 c-10 0-17 8-17 16 0 12 17 28 17 28 s17-14 17-28 c0-8-7-16-17-16z"/><circle cx="100" cy="80" r="6"/></g></svg><svg class="ruta-branch"><use href="#branch"/></svg></div>
-        <div><h3>1. Ruta de Mapeo Organizativo</h3><p class="rsub">Reconocer nuestro tejido</p><div class="rdiv"></div><p>Herramientas para identificar quiénes son las organizaciones, comunidades, redes y territorios con los que trabajamos, dónde están y qué hacen.</p><button class="ruta-btn" onclick="showView('mapeo')">Abrir ruta ❯</button></div>
+        <div><h3>1. Ruta de Mapeo Organizativo</h3><p class="rsub">Reconocer nuestro tejido</p><div class="rdiv dband"></div><p>Herramientas para identificar quiénes son las organizaciones, comunidades, redes y territorios con los que trabajamos, dónde están y qué hacen.</p><button class="ruta-btn" onclick="showView('mapeo')">Abrir ruta ❯</button></div>
       </section>
       <section class="ruta" style="--rc:#d95f18">
         <div class="ruta-folder"><svg viewBox="0 0 200 160" style="color:#d95f18"><use href="#folder"/><g stroke="#f6efe0" fill="none" stroke-width="4" stroke-linecap="round"><circle cx="100" cy="92" r="34"/><circle cx="100" cy="70" r="6"/><circle cx="76" cy="92" r="6"/><circle cx="124" cy="92" r="6"/><circle cx="100" cy="114" r="6"/><path d="M100 100 V86 M100 92 c0-6-4-9-9-9 0 6 4 9 9 9z M100 92 c0-6 4-9 9-9 0 6-4 9-9 9z"/></g></svg><svg class="ruta-branch"><use href="#branch"/></svg></div>
-        <div><h3>2. Ruta de Diagnóstico Organizativo</h3><p class="rsub">Comprender cómo estamos</p><div class="rdiv"></div><p>Herramientas para comprender el estado actual de nuestra organización, reconocer fortalezas, desafíos y necesidades, y definir líneas de mejora.</p><button class="ruta-btn" onclick="alert('🌱 Esta ruta estará disponible próximamente.')">Abrir ruta ❯</button></div>
+        <div><h3>2. Ruta de Diagnóstico Organizativo</h3><p class="rsub">Comprender cómo estamos</p><div class="rdiv dband"></div><p>Herramientas para comprender el estado actual de nuestra organización, reconocer fortalezas, desafíos y necesidades, y definir líneas de mejora.</p><button class="ruta-btn" onclick="alert('🌱 Esta ruta estará disponible próximamente.')">Abrir ruta ❯</button></div>
       </section>
       <section class="ruta" style="--rc:#1f6f8f">
         <div class="ruta-folder"><svg viewBox="0 0 200 160" style="color:#1f6f8f"><use href="#folder"/><g stroke="#f6efe0" fill="none" stroke-width="4" stroke-linecap="round"><circle cx="100" cy="92" r="34" stroke-dasharray="10 8"/><circle cx="100" cy="78" r="9"/><path d="M84 112 c0-10 7-16 16-16 s16 6 16 16"/><path d="M100 106 l-5 -5 a3.5 3.5 0 1 1 5 -5 a3.5 3.5 0 1 1 5 5 z" fill="#f6efe0" stroke="none"/></g></svg><svg class="ruta-branch"><use href="#branch"/></svg></div>
-        <div><h3>3. Ruta de Autoevaluación Organizativa</h3><p class="rsub">Reconocer dónde queremos crecer</p><div class="rdiv"></div><p>Herramientas para conocer nuestro nivel de desarrollo organizativo, identificar capacidades que queremos fortalecer y posibles formas de acompañamiento.</p><button class="ruta-btn" onclick="alert('🌱 Esta ruta estará disponible próximamente.')">Abrir ruta ❯</button></div>
+        <div><h3>3. Ruta de Autoevaluación Organizativa</h3><p class="rsub">Reconocer dónde queremos crecer</p><div class="rdiv dband"></div><p>Herramientas para conocer nuestro nivel de desarrollo organizativo, identificar capacidades que queremos fortalecer y posibles formas de acompañamiento.</p><button class="ruta-btn" onclick="showView('autoeval')">Abrir ruta ❯</button></div>
       </section>
     </div>
-    <div class="home-diamonds"></div>
+    <div class="home-diamonds dband"></div>
     <svg class="home-wave" viewBox="0 0 1250 110" preserveAspectRatio="none"><use href="#wave"/></svg>
+  </div>
+</div>
+
+<!-- RUTA 3: AUTOEVALUACIÓN (GOOGLE SHEETS) -->
+<div id="view-autoeval" class="view hidden">
+  <div class="autoeval-wrap">
+    <div class="autoeval-head">
+      <h1>Ruta de Autoevaluación Organizativa</h1>
+      <button class="autoeval-back" onclick="showView('tejido')">←&nbsp; VOLVER A TEJIDO ORGANIZATIVO</button>
+    </div>
+    <iframe class="autoeval-frame" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIdLkimZDuwKPLYE8iKjIQJzgcjJb7U__gnwk2IjYypeHnmU55pkdaoGgvVvjUfg/pubhtml?widget=true&amp;headers=false"></iframe>
   </div>
 </div>
 
@@ -430,14 +463,13 @@
     <div class="tej-bar">
       <img src="logopawanka.png" alt="Pawanka Fund" class="tej-logo">
       <button class="tej-back" onclick="showView('tejido')">←&nbsp; VOLVER A TEJIDO ORGANIZATIVO</button>
-      <button class="tej-dl" onclick="alert('📥 Aquí podrás enlazar tus archivos para descargar.')">⬇ Descargar recursos</button>
     </div>
-    <div class="band-full"></div>
+    <div class="band-full dband"></div>
     <div class="map-head">
       <div class="map-folder"><svg viewBox="0 0 200 160" style="color:#3f7a3a"><use href="#folder"/><g stroke="#f6efe0" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="70" y="82" width="60" height="40" rx="4" stroke-dasharray="8 6"/><path d="M100 64 c-10 0-17 8-17 16 0 12 17 28 17 28 s17-14 17-28 c0-8-7-16-17-16z"/><circle cx="100" cy="80" r="6"/></g></svg><svg class="ruta-branch"><use href="#branch"/></svg></div>
       <div class="map-titles">
         <h1><span class="tg">Ruta de Mapeo</span><br><span class="tb">Organizativo</span></h1>
-        <div class="home-div" style="max-width:340px;margin:12px 0 0"></div>
+        <div class="home-div dband" style="max-width:340px;margin:12px 0 0"></div>
         <p>Esta ruta metodológica acompaña a las organizaciones de Pueblos Indígenas en un proceso participativo para identificar la información que necesitan, organizarla y convertirla en conocimiento para fortalecer su organización, su gobernanza y la toma de decisiones colectivas.</p>
       </div>
       <div class="home-basket"><svg viewBox="0 0 520 430"><use href="#basket"/></svg></div>
@@ -453,7 +485,7 @@
       <section class="t7" style="--tc:#2e5e2a"><div class="h7"><span class="n7">1</span><div class="t7t">Herramienta 1:<b>Lienzo de Necesidades de Información</b></div></div><div class="t7icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="30" cy="36" r="19"/><circle cx="30" cy="36" r="11"/><circle cx="30" cy="36" r="4"/><path d="M30 36 L52 14 M46 13 h7 v7"/></svg></div><p>Identificamos qué queremos comprender o resolver y qué información necesitamos para hacerlo.</p><button class="t7btn" onclick="showView('t1')">Ver herramienta</button><button class="t7dl" onclick="alert('📥 Descarga disponible próximamente.')">⬇ Descargar</button></section>
       <section class="t7" style="--tc:#d95f18"><div class="h7"><span class="n7">2</span><div class="t7t">Herramienta 2:<b>Diseñando nuestras preguntas</b></div></div><div class="t7icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M22 42 a11 11 0 1 1 3-21 a12 12 0 0 1 22 3 a9 9 0 0 1-3 18 z"/><path d="M30 26 c0-5 9-5 9 0 c0 3.5-4.5 3.5-4.5 7"/><circle cx="34.5" cy="38" r="1.8" fill="currentColor"/><circle cx="20" cy="50" r="3.5"/><circle cx="13" cy="57" r="2.2"/></svg></div><p>Creamos preguntas que nos ayudarán a obtener la información que necesitamos.</p><button class="t7btn" onclick="showView('t2')">Ver herramienta</button><button class="t7dl" onclick="alert('📥 Descarga disponible próximamente.')">⬇ Descargar</button></section>
       <section class="t7" style="--tc:#1f6f8f"><div class="h7"><span class="n7">3</span><div class="t7t">Herramienta 3:<b>Construyendo nuestro formulario</b></div></div><div class="t7icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="10" width="32" height="44" rx="4"/><rect x="26" y="6" width="12" height="8" rx="2"/><path d="M23 26 l3 3 6-7 M23 36 l3 3 6-7 M23 46 l3 3 6-7 M36 28 h6 M36 38 h6 M36 48 h6"/></svg></div><p>Diseñamos nuestro instrumento de recolección de información de acuerdo con nuestras preguntas.</p><button class="t7btn" onclick="alert('🌱 Esta herramienta estará disponible próximamente.')">Ver herramienta</button><button class="t7dl" onclick="alert('📥 Descarga disponible próximamente.')">⬇ Descargar</button></section>
-      <section class="t7" style="--tc:#7d3f98"><div class="h7"><span class="n7">4</span><div class="t7t">Herramienta 4:<b>Planificando nuestra recolección de información</b></div></div><div class="t7icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><rect x="12" y="14" width="40" height="38" rx="4"/><path d="M12 26 h40 M22 8 v10 M42 8 v10"/><path d="M20 34 h6 M30 34 h6 M40 34 h6 M20 42 h6 M30 42 h6 M40 42 h6"/></svg></div><p>Organizamos cómo, cuándo, dónde y con quiénes vamos a recolectar la información necesaria.</p><button class="t7btn" onclick="alert('🌱 Esta herramienta estará disponible próximamente.')">Ver herramienta</button><button class="t7dl" onclick="alert('📥 Descarga disponible próximamente.')">⬇ Descargar</button></section>
+      <section class="t7" style="--tc:#7d3f98"><div class="h7"><span class="n7">4</span><div class="t7t">Herramienta 4:<b>Planificando nuestra recolección de información</b></div></div><div class="t7icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><rect x="12" y="14" width="40" height="38" rx="4"/><path d="M12 26 h40 M22 8 v10 M42 8 v10"/><path d="M20 34 h6 M30 34 h6 M40 34 h6 M20 42 h6 M30 42 h6 M40 42 h6"/></svg></div><p>Organizamos cómo, cuándo, dónde y con quiénes vamos a recolectar la información necesaria.</p><button class="t7btn" onclick="showView('t4')">Ver herramienta</button><button class="t7dl" onclick="alert('📥 Descarga disponible próximamente.')">⬇ Descargar</button></section>
     </div>
     <div class="tools7b">
       <section class="t7" style="--tc:#5e7a1f"><div class="h7"><span class="n7">5</span><div class="t7t">Herramienta 5:<b>Comprendiendo nuestros resultados</b></div></div><div class="t7icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M14 50 V32 M24 50 V22 M34 50 V38"/><circle cx="42" cy="40" r="11"/><path d="M50 48 l8 8"/></svg></div><p>Organizamos y analizamos la información para entender qué nos dicen los datos.</p><button class="t7btn" onclick="showView('t5')">Ver herramienta</button><button class="t7dl" onclick="alert('📥 Descarga disponible próximamente.')">⬇ Descargar</button></section>
@@ -461,7 +493,7 @@
       <section class="t7" style="--tc:#1f7a6f"><div class="h7"><span class="n7">7</span><div class="t7t">Herramienta 7:<b>Un paso más allá Jamovi</b></div></div><div class="t7icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="14" width="32" height="24" rx="3"/><path d="M10 44 h44 l-5 -6 H15 z"/><text x="32" y="29" font-size="9" text-anchor="middle" fill="currentColor" stroke="none" font-family="Nunito" font-weight="bold">jamovi</text></svg></div><p>Usamos Jamovi para analizar la información de manera sencilla y obtener resultados que nos orienten mejor.</p><button class="t7btn" onclick="alert('🌱 Esta herramienta estará disponible próximamente.')">Ver herramienta</button><button class="t7dl" onclick="alert('📥 Descarga disponible próximamente.')">⬇ Descargar</button></section>
     </div>
     <div class="home-banner" style="max-width:none;margin:0 0 26px"><svg viewBox="0 0 40 110"><use href="#branch"/></svg><p>Estas herramientas son una invitación a conversar, escuchar diferentes voces y construir respuestas desde nuestras realidades. Úsalas, adáptalas y hazlas parte de tu camino.</p></div>
-    <div class="home-diamonds"></div>
+    <div class="home-diamonds dband"></div>
     <svg class="home-wave" viewBox="0 0 1250 110" preserveAspectRatio="none"><use href="#wave"/></svg>
   </div>
 </div>
@@ -472,11 +504,11 @@
   <p class="hint">✏️ Haz clic en los recuadros para escribir · ✅ marca las casillas de tipos de información.</p>
   <div class="sheet" id="sheet1">
     <header>
-      <div class="logo-pawanka"><svg viewBox="0 0 100 100"><path d="M50 50 L50 4 A46 46 0 0 0 4 50 Z" fill="#7ab648"/><path d="M50 50 L4 50 A46 46 0 0 0 50 96 Z" fill="#d94a38"/><path d="M50 50 L50 96 A46 46 0 0 0 96 50 Z" fill="#2e6db4"/><path d="M50 50 L96 50 A46 46 0 0 0 50 4 Z" fill="#f2a33c"/><rect x="35" y="35" width="30" height="30" fill="#a2499a"/><rect x="43" y="43" width="14" height="14" fill="#8fbc6a"/></svg><div class="n1">PAWANKA</div><div class="n2">FUND</div></div>
+      <div class="logo-pawanka"><svg viewBox="0 0 100 100"><use href="#pawlogo"/></svg><div class="n1">PAWANKA</div><div class="n2">FUND</div></div>
       <div class="head-center">
         <p class="h-small">HERRAMIENTA 1.</p>
         <div class="title-row"><img src="logopawanka.png" alt="Logo Pawanka" class="title-logo"><h1>Lienzo de Necesidades de Información</h1></div>
-        <svg class="divider" viewBox="0 0 320 14"><line x1="0" y1="7" x2="320" y2="7" stroke="#8c2f26" stroke-width="1.4"/><polygon points="40,1 46,7 40,13 34,7" fill="#c0392b"/><polygon points="106,1 112,7 106,13 100,7" fill="#1e7a3c"/><polygon points="160,0 167,7 160,14 153,7" fill="#e9a63a"/><polygon points="214,1 220,7 214,13 208,7" fill="#1e7a3c"/><polygon points="280,1 286,7 280,13 274,7" fill="#c0392b"/></svg>
+        <svg class="divider" viewBox="0 0 320 14"><use href="#divd"/></svg>
       </div>
       <div style="display:flex;justify-content:center"><svg style="width:56px;height:100px;--c1:#3a7d44;--c2:#8fbc6a;--stem:#7a5231"><use href="#branch"/></svg></div>
     </header>
@@ -488,7 +520,7 @@
     <main class="ngrid">
       <section class="ncard c1"><div class="nhead"><span class="nnum">1</span><span class="ntitle">¿Qué queremos comprender o resolver?</span></div><p class="nq"><span class="em">🎯</span> ¿Cuál es el reto, desafío o tema que queremos entender mejor como organización?</p><svg class="zig"><use href="#zig"/></svg><div class="writebox" contenteditable="true" data-ph="Escriban aquí…"></div></section>
       <section class="ncard c2"><div class="nhead"><span class="nnum">2</span><span class="ntitle">¿Qué queremos conocer mejor?</span></div><p class="nq"><span class="em">🧠</span> ¿Qué datos o detalles nos ayudarían a tomar decisiones?</p><p class="nq"><span class="em">⚙️</span> ¿Qué procesos queremos entender con mayor profundidad (actividades y trabajos que hacemos)?</p><svg class="zig"><use href="#zig"/></svg><div class="writebox" contenteditable="true" data-ph="Escriban aquí…"></div></section>
-      <section class="ncard c3"><div class="nhead"><span class="nnum">3</span><span class="ntitle">¿Qué información necesitamos?</span></div><p class="nq"><span class="em">🔍</span> ¿Qué tipos de información requerimos para responder esas preguntas?</p><p class="nq"><span class="em">📌</span> ¿Qué tan difícil o fácil será conseguirla? (puede ser más de una)</p><label class="chk"><input type="checkbox"> Historias y testimonios</label><label class="chk"><input type="checkbox"> Registros y archivos</label><label class="chk"><input type="checkbox"> Datos de otras organizaciones</label><label class="chk"><input type="checkbox"> Números y estadísticas</label><label class="chk"><input type="checkbox"> Observaciones en el territorio</label><label class="chk"><input type="checkbox"> Conocimiento de las comunidades</label><label class="chk"><input type="checkbox"> Otros: <span class="write2" contenteditable="true"></span></label></section>
+      <section class="ncard c3"><div class="nhead"><span class="nnum">3</span><span class="ntitle">¿Qué información necesitamos?</span></div><p class="nq"><span class="em">🔍</span> ¿Qué tipos de información requerimos para responder esas preguntas?</p><p class="nq"><span class="em">📌</span> ¿Qué tan difícil o fácil será conseguirla? (puede ser más de una)</p><label class="chk"><input type="checkbox"> Historias y testimonios</label><label class="chk"><input type="checkbox"> Registros y archivos</label><label class="chk"><input type="checkbox"> Datos de otras organizaciones</label><label class="chk"><input type="checkbox"> Números y estadísticas</label><label class="chk"><input type="checkbox"> Observaciones en el territorio</label><label class="chk"><input type="checkbox"> Conocimiento de las comunidades</label><label class="chk"><input type="checkbox"> Otros: <span class="write2" contenteditable="true"></span></label><svg class="zig"><use href="#zig"/></svg><div class="writebox" contenteditable="true" data-ph="Escriban aquí…"></div></section>
       <section class="ncard c4"><div class="nhead"><span class="nnum">4</span><span class="ntitle">¿Dónde podemos encontrar esa información?</span></div><p class="nq"><span class="em">📍</span> ¿En qué lugares o en qué personas podemos encontrar esa información?</p><p class="nq"><span class="em">📄</span> ¿Existen documentos, registros o experiencias previas que podamos consultar?</p><svg class="zig"><use href="#zig"/></svg><div class="writebox" contenteditable="true" data-ph="Escriban aquí…"></div></section>
       <section class="ncard c5"><div class="nhead"><span class="nnum">5</span><span class="ntitle">¿Quiénes pueden ayudarnos?</span></div><p class="nq"><span class="em">🤝</span> ¿Qué personas pueden ayudarnos a recopilar esa información?</p><p class="nq"><span class="em">🏛️</span> ¿Qué organizaciones o aliados podemos contactar?</p><p class="nq"><span class="em">❓</span> ¿Qué apoyos necesitamos?</p><div class="writebox" contenteditable="true" data-ph="Escriban aquí…"></div></section>
       <section class="ncard c6"><div class="nhead"><span class="nnum">6</span><span class="ntitle">¿Qué haremos con esta información?</span></div><p class="nq"><span class="em">🌱</span> ¿Cómo nos ayudará esta información? ¿Qué decisiones podemos tomar?</p><p class="nq"><span class="em">📣</span> ¿Cómo la compartiremos con otras organizaciones?</p><svg class="zig"><use href="#zig"/></svg><div class="writebox" contenteditable="true" data-ph="Escriban aquí…"></div></section>
@@ -508,7 +540,7 @@
   <p class="hint">✏️ Haz clic en cada celda para escribir · el texto baja en vertical.</p>
   <div class="sheet" id="sheet2">
     <header>
-      <div class="logo-pawanka"><svg viewBox="0 0 100 100"><path d="M50 50 L50 4 A46 46 0 0 0 4 50 Z" fill="#7ab648"/><path d="M50 50 L4 50 A46 46 0 0 0 50 96 Z" fill="#d94a38"/><path d="M50 50 L50 96 A46 46 0 0 0 96 50 Z" fill="#2e6db4"/><path d="M50 50 L96 50 A46 46 0 0 0 50 4 Z" fill="#f2a33c"/><rect x="35" y="35" width="30" height="30" fill="#a2499a"/><rect x="43" y="43" width="14" height="14" fill="#8fbc6a"/></svg><div class="n1">PAWANKA</div><div class="n2">FUND</div></div>
+      <div class="logo-pawanka"><svg viewBox="0 0 100 100"><use href="#pawlogo"/></svg><div class="n1">PAWANKA</div><div class="n2">FUND</div></div>
       <div class="head-center">
         <p class="h-small">HERRAMIENTA 2.</p>
         <div class="title-row"><img src="logopawanka.png" alt="Logo Pawanka" class="title-logo"><h1>Diseñando nuestras preguntas</h1></div>
@@ -519,40 +551,133 @@
     </header>
     <div class="t2wrap">
       <div class="t2">
-        <div class="col cg">
-          <div class="chead"><div class="cic"><svg viewBox="0 0 40 40" fill="#fff"><circle cx="20" cy="11" r="5.5"/><path d="M20 18c-6 0-10 4.5-10 9h20c0-4.5-4-9-10-9z"/><circle cx="8.5" cy="14" r="4"/><path d="M8.5 19c-4 0-6.5 3-6.5 6h9c0-2.5-1-4.6-2.5-6z"/><circle cx="31.5" cy="14" r="4"/><path d="M31.5 19c-1.5 1.4-2.5 3.5-2.5 6h9c0-3-2.5-6-6.5-6z"/></svg></div><div><p class="ct">Si queremos…</p><p class="cq">¿Qué queremos comprender o resolver?</p></div></div>
-          <div class="row"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
-          <div class="row"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
-          <div class="row"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
-          <div class="row"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
-          <div class="row"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
-        </div>
-        <div class="col co">
-          <div class="chead"><div class="cic"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><circle cx="20" cy="20" r="12"/><path d="M16 16 c0-4 8-4 8 0 c0 3-4 3-4 6"/><circle cx="20" cy="26" r="1.6" fill="#fff"/></svg></div><div><p class="ct">Podemos preguntar…:</p><p class="cq">¿Qué pregunta nos ayudará a conocer esa información?</p></div></div>
-          <div class="row"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-          <div class="row"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-          <div class="row"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-          <div class="row"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-          <div class="row"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-        </div>
-        <div class="col cb">
-          <div class="chead"><div class="cic"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="7" width="20" height="27" rx="3"/><rect x="16" y="4" width="8" height="5" rx="1.5"/><path d="M14 15 h12 M14 21 h12 M14 27 h8"/></svg></div><div><p class="ct">¿Cómo responderemos esta pregunta?</p><p class="cq">¿Qué tipo de respuesta es la más adecuada?</p></div></div>
-          <div class="row"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-          <div class="row"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-          <div class="row"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-          <div class="row"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-          <div class="row"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
-        </div>
+        <div class="chead cg"><div class="cic"><svg viewBox="0 0 40 40" fill="#fff"><circle cx="20" cy="11" r="5.5"/><path d="M20 18c-6 0-10 4.5-10 9h20c0-4.5-4-9-10-9z"/><circle cx="8.5" cy="14" r="4"/><path d="M8.5 19c-4 0-6.5 3-6.5 6h9c0-2.5-1-4.6-2.5-6z"/><circle cx="31.5" cy="14" r="4"/><path d="M31.5 19c-1.5 1.4-2.5 3.5-2.5 6h9c0-3-2.5-6-6.5-6z"/></svg></div><div><p class="ct">Si queremos…</p><p class="cq">¿Qué queremos comprender o resolver?</p></div></div>
+        <div class="chead co"><div class="cic"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><circle cx="20" cy="20" r="12"/><path d="M16 16 c0-4 8-4 8 0 c0 3-4 3-4 6"/><circle cx="20" cy="26" r="1.6" fill="#fff"/></svg></div><div><p class="ct">Podemos preguntar…:</p><p class="cq">¿Qué pregunta nos ayudará a conocer esa información?</p></div></div>
+        <div class="chead cb"><div class="cic"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="7" width="20" height="27" rx="3"/><rect x="16" y="4" width="8" height="5" rx="1.5"/><path d="M14 15 h12 M14 21 h12 M14 27 h8"/></svg></div><div><p class="ct">¿Cómo responderemos esta pregunta?</p><p class="cq">¿Qué tipo de respuesta es la más adecuada?</p></div></div>
+        <div class="row cg"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
+        <div class="row co"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
+        <div class="row cb"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
+        <div class="row cg"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
+        <div class="row co"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
+        <div class="row cb"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
+        <div class="row cg"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
+        <div class="row co"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
+        <div class="row cb"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
+        <div class="row cg"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
+        <div class="row co"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
+        <div class="row cb"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
+        <div class="row cg"><svg class="zd" viewBox="0 0 10 40"><path d="M8 0 L2 5 L8 10 L2 15 L8 20 L2 25 L8 30 L2 35 L8 40" stroke="currentColor" fill="none" stroke-width="2"/></svg><div class="cell" contenteditable="true"></div></div>
+        <div class="row co"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
+        <div class="row cb"><span class="dot2"></span><div class="cell" contenteditable="true"></div></div>
       </div>
     </div>
     <footer class="t2foot">
       <div class="lan2">
-        <svg viewBox="0 0 120 26" width="100" style="display:block;margin:0 auto 2px"><g stroke-width="2.4" stroke-linecap="round" fill="none"><g stroke="#e67e22"><circle cx="30" cy="6" r="3.4" fill="#e67e22" stroke="none"/><line x1="30" y1="10" x2="30" y2="18"/><path d="M22 14 L30 11 L38 14"/></g><g stroke="#2980b9"><circle cx="48" cy="6" r="3.4" fill="#2980b9" stroke="none"/><line x1="48" y1="10" x2="48" y2="18"/><path d="M38 14 L48 11 L58 14"/></g><g stroke="#8e44ad"><circle cx="66" cy="6" r="3.4" fill="#8e44ad" stroke="none"/><line x1="66" y1="10" x2="66" y2="18"/><path d="M58 14 L66 11 L74 14"/></g><g stroke="#c0392b"><circle cx="84" cy="6" r="3.4" fill="#c0392b" stroke="none"/><line x1="84" y1="10" x2="84" y2="18"/><path d="M74 14 L84 11 L92 14"/></g></g></svg>
+        <svg viewBox="0 0 120 26" width="100" style="display:block;margin:0 auto 2px"><use href="#lanppl"/></svg>
         <div class="lan">LAN <span style="font-size:13px;letter-spacing:4px">PAWANKA</span></div>
         <div class="paw2">Tejido de Aprendizaje</div>
       </div>
     </footer>
-    <div class="t2band"></div>
+    <div class="t2band dband"></div>
+  </div>
+</div>
+
+<!-- HERRAMIENTA 4 -->
+<div id="view-t4" class="view hidden">
+  <div class="toolbar"><button class="tb-back" onclick="showView('mapeo')">⬅ Volver a Ruta de Mapeo</button><button class="tb-pdf" onclick="window.print()">🖨️ PDF</button><button class="tb-png" onclick="exportPNG('sheet4','Herramienta4_Planificacion')">🖼️ PNG</button><button class="tb-clear" onclick="limpiar('view-t4')">🧹 Limpiar</button></div>
+  <p class="hint">✏️ Haz clic en las celdas para escribir · ✅ marca las casillas de seguimiento.</p>
+  <div class="sheet" id="sheet4">
+    <header>
+      <div class="logo-pawanka"><svg viewBox="0 0 100 100"><use href="#pawlogo"/></svg><div class="n1">PAWANKA</div><div class="n2">FUND</div></div>
+      <div class="head-center">
+        <h1>Herramienta 4: Planificando y monitoreando<br>nuestra recolección de información</h1>
+        <p class="sub">Organizamos las actividades para la recolección de información con las organizaciones y comunidades.</p>
+        <div class="home-div dband" style="max-width:430px;margin:6px auto 0"></div>
+      </div>
+      <div class="h4art">
+        <svg viewBox="0 0 210 90">
+          <path d="M0 90 Q 55 64 115 80 T 210 78 L210 90 Z" fill="#2e5e2a"/>
+          <path d="M120 90 Q 165 70 210 82 L210 90 Z" fill="#7a8f3a"/>
+          <path d="M18 78 V46" stroke="#3a7d44" stroke-width="2.5" fill="none"/>
+          <path d="M18 56 C 10 53 6 46 6 40 C 13 43 17 49 18 56" fill="#7ab648"/>
+          <path d="M18 50 C 26 47 30 40 30 34 C 23 37 19 43 18 50" fill="#3a7d44"/>
+          <g stroke-width="3" stroke-linecap="round" fill="none">
+            <g stroke="#d95f18"><circle cx="62" cy="34" r="6" fill="#d95f18" stroke="none"/><line x1="62" y1="41" x2="62" y2="62"/><path d="M46 48 L62 43 L78 48"/><line x1="62" y1="62" x2="56" y2="76"/><line x1="62" y1="62" x2="68" y2="76"/></g>
+            <g stroke="#17718f"><circle cx="98" cy="32" r="6" fill="#17718f" stroke="none"/><line x1="98" y1="39" x2="98" y2="60"/><path d="M78 48 L98 42 L118 48"/><line x1="98" y1="60" x2="92" y2="74"/><line x1="98" y1="60" x2="104" y2="74"/></g>
+            <g stroke="#7d3f98"><circle cx="134" cy="34" r="6" fill="#7d3f98" stroke="none"/><line x1="134" y1="41" x2="134" y2="62"/><path d="M118 48 L134 43 L150 48"/><line x1="134" y1="62" x2="128" y2="76"/><line x1="134" y1="62" x2="140" y2="76"/></g>
+            <g stroke="#2e7d4f"><circle cx="168" cy="34" r="6" fill="#2e7d4f" stroke="none"/><line x1="168" y1="41" x2="168" y2="62"/><path d="M150 48 L168 43 L182 48"/><line x1="168" y1="62" x2="162" y2="76"/><line x1="168" y1="62" x2="174" y2="76"/></g>
+          </g>
+          <circle cx="196" cy="22" r="9" fill="none" stroke="#e2571e" stroke-width="3"/><circle cx="196" cy="22" r="3.5" fill="#e2571e"/>
+          <g stroke="#e2571e" stroke-width="2.5" stroke-linecap="round"><line x1="196" y1="7" x2="196" y2="3"/><line x1="196" y1="37" x2="196" y2="41"/><line x1="181" y1="22" x2="177" y2="22"/><line x1="211" y1="22" x2="215" y2="22"/></g>
+        </svg>
+      </div>
+    </header>
+    <div class="t4wrap">
+      <table>
+        <thead><tr>
+          <th style="background:#2e5e2a"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><circle cx="20" cy="10" r="4.5"/><path d="M12 22 q8 -10 16 0"/><circle cx="9" cy="14" r="3.5"/><path d="M3 24 q6 -8 12 0"/><circle cx="31" cy="14" r="3.5"/><path d="M25 24 q6 -8 12 0"/></svg>Organización o comunidad</th>
+          <th style="background:#d95f18"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><circle cx="20" cy="12" r="6"/><path d="M8 32 q12 -14 24 0"/></svg>Persona responsable</th>
+          <th style="background:#7d3f98"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="9" width="24" height="15" rx="2"/><path d="M5 29 h30 l-3 -4 H8 z"/><circle cx="20" cy="16" r="4"/><path d="M16 16 h8 M20 12 v8"/></svg>Modalidad (Virtual / Presencial)</th>
+          <th style="background:#17718f"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="15" width="24" height="15" rx="2"/><path d="M16 15 v-4 h8 v4"/><path d="M8 21 h24"/><circle cx="20" cy="24" r="2"/></svg>Herramienta (Google Forms, Microsoft Forms, Excel, Impreso, otra)</th>
+          <th style="background:#b06a2a"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><rect x="8" y="10" width="24" height="20" rx="2"/><path d="M8 16 h24 M14 7 v6 M26 7 v6"/><circle cx="14" cy="22" r="1.4" fill="#fff"/><circle cx="20" cy="22" r="1.4" fill="#fff"/><circle cx="26" cy="22" r="1.4" fill="#fff"/><circle cx="14" cy="27" r="1.4" fill="#fff"/><circle cx="20" cy="27" r="1.4" fill="#fff"/></svg>Fecha programada</th>
+          <th style="background:#2e5e2a"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="8" width="20" height="24" rx="2"/><rect x="16" y="5" width="8" height="5" rx="1"/><path d="M14 16 l3 3 5-6 M14 24 l3 3 5-6"/></svg>Estado<span class="leg">P = Programada<br>E = En curso<br>C = Completada<br>R = Reprogramada</span></th>
+          <th style="background:#7a8f3a"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><rect x="7" y="10" width="26" height="16" rx="6"/><path d="M14 26 l-3 6 8 -6"/><circle cx="14" cy="18" r="1.4" fill="#fff"/><circle cx="20" cy="18" r="1.4" fill="#fff"/><circle cx="26" cy="18" r="1.4" fill="#fff"/></svg>Observaciones</th>
+        </tr></thead>
+        <tbody>
+          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="seg-head">
+      <div class="seg-ic"><svg viewBox="0 0 40 40" fill="none" stroke="#d9a03a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="7" width="20" height="24" rx="2"/><rect x="15" y="4" width="8" height="5" rx="1"/><path d="M13 15 l3 3 5-6 M13 23 l3 3 5-6"/><circle cx="27" cy="25" r="6"/><line x1="31" y1="29" x2="36" y2="34"/></svg></div>
+      <div class="seg-title"><h2>Seguimiento del proceso</h2><div class="uline"></div></div>
+      <p>Hacemos seguimiento al avance de la recolección de información para asegurar que todo esté completo y organizado.</p>
+      <svg class="seg-leaf" viewBox="0 0 130 70">
+        <path d="M20 60 C 14 46 16 34 24 26 C 30 36 28 50 20 60" fill="#7ab648"/>
+        <path d="M45 62 C 40 44 44 28 56 20 C 62 34 56 52 45 62" fill="#2e5e2a"/>
+        <path d="M72 62 C 68 46 72 32 84 26 C 88 40 82 54 72 62" fill="#8fbc6a"/>
+        <path d="M98 60 C 94 46 98 34 110 28 C 114 42 108 54 98 60" fill="#7d3f98"/>
+        <path d="M10 64 h112" stroke="#d99a4a" stroke-width="2" stroke-dasharray="6 5"/>
+        <circle cx="12" cy="20" r="2.5" fill="#d95f18"/><circle cx="120" cy="14" r="2.5" fill="#d95f18"/><circle cx="60" cy="10" r="2" fill="#d99a4a"/>
+      </svg>
+    </div>
+    <div class="t4wrap">
+      <table>
+        <thead><tr>
+          <th style="background:#2e5e2a"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><circle cx="20" cy="10" r="4.5"/><path d="M12 22 q8 -10 16 0"/><circle cx="9" cy="14" r="3.5"/><path d="M3 24 q6 -8 12 0"/><circle cx="31" cy="14" r="3.5"/><path d="M25 24 q6 -8 12 0"/></svg>Organización o comunidad</th>
+          <th style="background:#d95f18"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"><path d="M6 20 L34 8 L26 32 L20 24 z"/><path d="M34 8 L20 24"/></svg>Formulario enviado o visita realizada</th>
+          <th style="background:#7d3f98"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"><rect x="7" y="11" width="26" height="18" rx="2"/><path d="M7 13 l13 9 13 -9"/></svg>Información recibida</th>
+          <th style="background:#17718f"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><circle cx="17" cy="17" r="8"/><line x1="23" y1="23" x2="32" y2="32"/></svg>Información revisada</th>
+          <th style="background:#b06a2a"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"><path d="M7 12 h10 l4 4 h12 v14 H7 z"/></svg>Consolidada en la base de datos</th>
+          <th style="background:#7a8f3a"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><rect x="7" y="10" width="26" height="16" rx="6"/><path d="M14 26 l-3 6 8 -6"/><circle cx="14" cy="18" r="1.4" fill="#fff"/><circle cx="20" cy="18" r="1.4" fill="#fff"/><circle cx="26" cy="18" r="1.4" fill="#fff"/></svg>Observaciones</th>
+        </tr></thead>
+        <tbody>
+          <tr><td contenteditable="true"></td><td class="ckc"><input type="checkbox" class="ck-o"></td><td class="ckc"><input type="checkbox" class="ck-p"></td><td class="ckc"><input type="checkbox" class="ck-t"></td><td class="ckc"><input type="checkbox" class="ck-b"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td class="ckc"><input type="checkbox" class="ck-o"></td><td class="ckc"><input type="checkbox" class="ck-p"></td><td class="ckc"><input type="checkbox" class="ck-t"></td><td class="ckc"><input type="checkbox" class="ck-b"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td class="ckc"><input type="checkbox" class="ck-o"></td><td class="ckc"><input type="checkbox" class="ck-p"></td><td class="ckc"><input type="checkbox" class="ck-t"></td><td class="ckc"><input type="checkbox" class="ck-b"></td><td contenteditable="true"></td></tr>
+          <tr><td contenteditable="true"></td><td class="ckc"><input type="checkbox" class="ck-o"></td><td class="ckc"><input type="checkbox" class="ck-p"></td><td class="ckc"><input type="checkbox" class="ck-t"></td><td class="ckc"><input type="checkbox" class="ck-b"></td><td contenteditable="true"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="estados">
+      <span class="lab">Estados:</span>
+      <span class="est"><span class="st" style="background:#7a8f3a">P</span> Programada</span>
+      <span class="est"><span class="st" style="background:#17718f">E</span> En curso</span>
+      <span class="est"><span class="st" style="background:#7d3f98">C</span> Completada</span>
+      <span class="est"><span class="st" style="background:#d95f18">R</span> Reprogramada</span>
+      <span class="est-note"><svg viewBox="0 0 40 34" fill="none" stroke="#2e7d4f" stroke-width="2" stroke-linecap="round"><circle cx="20" cy="8" r="4.5"/><path d="M12 20 q8 -10 16 0"/><circle cx="9" cy="12" r="3.5"/><path d="M3 22 q6 -8 12 0"/><circle cx="31" cy="12" r="3.5"/><path d="M25 22 q6 -8 12 0"/></svg>Este seguimiento nos ayuda a no perder ningún contacto y a completar la información de manera organizada.</span>
+    </div>
+    <div class="f4">
+      <div class="logo-lan">
+        <svg viewBox="0 0 120 26" width="110" style="display:block;margin:0 0 2px auto"><use href="#lanppl"/></svg>
+        <div class="lan">LAN</div><div class="paw">PAWANKA</div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -562,12 +687,12 @@
   <p class="hint">✏️ Haz clic en las líneas o en el recuadro punteado para escribir.</p>
   <div class="sheet" id="sheet5">
     <header>
-      <div class="logo-pawanka"><svg viewBox="0 0 100 100"><path d="M50 50 L50 4 A46 46 0 0 0 4 50 Z" fill="#7ab648"/><path d="M50 50 L4 50 A46 46 0 0 0 50 96 Z" fill="#d94a38"/><path d="M50 50 L50 96 A46 46 0 0 0 96 50 Z" fill="#2e6db4"/><path d="M50 50 L96 50 A46 46 0 0 0 50 4 Z" fill="#f2a33c"/><rect x="35" y="35" width="30" height="30" fill="#a2499a"/><rect x="43" y="43" width="14" height="14" fill="#8fbc6a"/></svg><div class="n1">PAWANKA</div><div class="n2">FUND</div></div>
+      <div class="logo-pawanka"><svg viewBox="0 0 100 100"><use href="#pawlogo"/></svg><div class="n1">PAWANKA</div><div class="n2">FUND</div></div>
       <div class="head-center">
         <span class="banner5">HERRAMIENTA 5</span>
         <h1>Comprendiendo nuestros resultados</h1>
         <p class="sub">Aprendamos a leer e interpretar los gráficos o tablas que genera nuestro formulario para tomar mejores decisiones.</p>
-        <svg class="divider5" viewBox="0 0 320 14"><line x1="0" y1="7" x2="320" y2="7" stroke="#8c2f26" stroke-width="1.4"/><polygon points="40,1 46,7 40,13 34,7" fill="#c0392b"/><polygon points="106,1 112,7 106,13 100,7" fill="#1e7a3c"/><polygon points="160,0 167,7 160,14 153,7" fill="#e9a63a"/><polygon points="214,1 220,7 214,13 208,7" fill="#1e7a3c"/><polygon points="280,1 286,7 280,13 274,7" fill="#c0392b"/></svg>
+        <svg class="divider5" viewBox="0 0 320 14"><use href="#divd"/></svg>
       </div>
       <div class="h5right">
         <svg class="chart5" viewBox="0 0 120 120"><rect x="16" y="52" width="14" height="42" fill="#7d3f98"/><rect x="36" y="36" width="14" height="58" fill="#c0392b"/><rect x="56" y="20" width="14" height="74" fill="#e2571e"/><circle cx="82" cy="72" r="20" fill="none" stroke="#4a3b2b" stroke-width="5"/><line x1="96" y1="86" x2="110" y2="100" stroke="#4a3b2b" stroke-width="6" stroke-linecap="round"/></svg>
@@ -610,7 +735,7 @@
           <g fill="#1f6f8f"><circle cx="154" cy="40" r="7"/><path d="M142 72 q12 -18 24 0 z"/></g>
         </svg>
       </div>
-      <div class="logo-lan"><svg viewBox="0 0 120 26" width="110"><g stroke-width="2.4" stroke-linecap="round" fill="none"><g stroke="#e67e22"><circle cx="30" cy="6" r="3.4" fill="#e67e22" stroke="none"/><line x1="30" y1="10" x2="30" y2="18"/><path d="M22 14 L30 11 L38 14"/></g><g stroke="#2980b9"><circle cx="48" cy="6" r="3.4" fill="#2980b9" stroke="none"/><line x1="48" y1="10" x2="48" y2="18"/><path d="M38 14 L48 11 L58 14"/></g><g stroke="#8e44ad"><circle cx="66" cy="6" r="3.4" fill="#8e44ad" stroke="none"/><line x1="66" y1="10" x2="66" y2="18"/><path d="M58 14 L66 11 L74 14"/></g><g stroke="#c0392b"><circle cx="84" cy="6" r="3.4" fill="#c0392b" stroke="none"/><line x1="84" y1="10" x2="84" y2="18"/><path d="M74 14 L84 11 L92 14"/></g></g></svg><div class="lan">LAN</div><div class="paw">PAWANKA</div></div>
+      <div class="logo-lan"><svg viewBox="0 0 120 26" width="110"><use href="#lanppl"/></svg><div class="lan">LAN</div><div class="paw">PAWANKA</div></div>
     </footer>
     <div class="triangles"></div>
   </div>
@@ -622,7 +747,7 @@
   <p class="hint">✏️ Haz clic sobre las líneas o las celdas de la tabla para escribir.</p>
   <div class="sheet" id="sheet6">
     <header>
-      <div class="logo-pawanka"><svg viewBox="0 0 100 100"><path d="M50 50 L50 4 A46 46 0 0 0 4 50 Z" fill="#7ab648"/><path d="M50 50 L4 50 A46 46 0 0 0 50 96 Z" fill="#d94a38"/><path d="M50 50 L50 96 A46 46 0 0 0 96 50 Z" fill="#2e6db4"/><path d="M50 50 L96 50 A46 46 0 0 0 50 4 Z" fill="#f2a33c"/><rect x="35" y="35" width="30" height="30" fill="#a2499a"/><rect x="43" y="43" width="14" height="14" fill="#8fbc6a"/></svg><div class="n1">PAWANKA</div><div class="n2">FUND</div></div>
+      <div class="logo-pawanka"><svg viewBox="0 0 100 100"><use href="#pawlogo"/></svg><div class="n1">PAWANKA</div><div class="n2">FUND</div></div>
       <div class="head-center">
         <span class="banner">HERRAMIENTA 6</span>
         <div class="title-row"><img src="logopawanka.png" alt="Logo Pawanka" class="title-logo"><h1>Del Dato a la Acción</h1></div>
@@ -664,7 +789,7 @@
           </g>
         </svg>
       </div>
-      <div class="logo-lan"><svg viewBox="0 0 120 26" width="110"><g stroke-width="2.4" stroke-linecap="round" fill="none"><g stroke="#e67e22"><circle cx="30" cy="6" r="3.4" fill="#e67e22" stroke="none"/><line x1="30" y1="10" x2="30" y2="18"/><path d="M22 14 L30 11 L38 14"/></g><g stroke="#2980b9"><circle cx="48" cy="6" r="3.4" fill="#2980b9" stroke="none"/><line x1="48" y1="10" x2="48" y2="18"/><path d="M38 14 L48 11 L58 14"/></g><g stroke="#8e44ad"><circle cx="66" cy="6" r="3.4" fill="#8e44ad" stroke="none"/><line x1="66" y1="10" x2="66" y2="18"/><path d="M58 14 L66 11 L74 14"/></g><g stroke="#c0392b"><circle cx="84" cy="6" r="3.4" fill="#c0392b" stroke="none"/><line x1="84" y1="10" x2="84" y2="18"/><path d="M74 14 L84 11 L92 14"/></g></g></svg><div class="lan">LAN</div><div class="paw">PAWANKA</div></div>
+      <div class="logo-lan"><svg viewBox="0 0 120 26" width="110"><use href="#lanppl"/></svg><div class="lan">LAN</div><div class="paw">PAWANKA</div></div>
     </footer>
     <div class="triangles"></div>
   </div>
