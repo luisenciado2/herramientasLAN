@@ -1051,10 +1051,6 @@ function exportPDFDesdeBoton(btn){
   const textoOriginal = btn.innerHTML;
   btn.innerHTML = '⏳ Generando PDF...';
 
-  function urlDe(txt){
-    const m = txt.match(/url\(["']?([^"')]+)["']?\)/);
-    return m ? m[1] : null;
-  }
   function aBase64(url){
     return fetch(url).then(function(r){ return r.blob(); }).then(function(b){
       return new Promise(function(res){
@@ -1064,44 +1060,51 @@ function exportPDFDesdeBoton(btn){
       });
     });
   }
-  function restaurar(){
-    sheet.querySelectorAll('img[data-src-original]').forEach(function(img){
-      img.src = img.getAttribute('data-src-original');
-      img.removeAttribute('data-src-original');
-    });
-    const st = document.getElementById('estilosBase64Temp');
-    if(st) st.remove();
-    btn.disabled = false;
-    btn.innerHTML = textoOriginal;
-  }
 
-  // 1) Convertir todas las <img> de la hoja a base64
-  const tareas = Array.prototype.slice.call(sheet.querySelectorAll('img')).map(function(img){
-    if(!img.src || img.src.indexOf('data:') === 0) return Promise.resolve();
-    return aBase64(img.src).then(function(d){
-      img.setAttribute('data-src-original', img.src);
-      img.src = d;
-    }).catch(function(){});
-  });
-
-  // 2) Convertir el logo LAN (fondo ::after) a base64
+  // 1) Convierte el logo LAN (fondo ::after) a base64 antes de capturar
   const estilosTemp = document.createElement('style');
   estilosTemp.id = 'estilosBase64Temp';
+  const tareas = [];
   ['t1','t2','t4','t5','t6'].forEach(function(v){
     const s = document.querySelector('#view-'+v+' .sheet');
     if(!s) return;
     const bg = getComputedStyle(s,'::after').backgroundImage;
-    const u = bg ? urlDe(bg) : null;
+    const m = bg ? bg.match(/url\(["']?([^"')]+)["']?\)/) : null;
+    const u = m ? m[1] : null;
     if(!u || u.indexOf('data:') === 0) return;
     tareas.push(aBase64(u).then(function(d){
       estilosTemp.textContent += '#view-'+v+' .sheet::after{background-image:url("'+d+'") !important}\n';
     }).catch(function(){}));
   });
 
-  // 3) Capturar y generar el PDF
+  function restaurar(){
+    const st = document.getElementById('estilosBase64Temp');
+    if(st) st.remove();
+    btn.disabled = false;
+    btn.innerHTML = textoOriginal;
+  }
+
   Promise.all(tareas).then(function(){
     if(estilosTemp.textContent) document.head.appendChild(estilosTemp);
-    return html2canvas(sheet,{scale:2,backgroundColor:'#ffffff',logging:false});
+    return html2canvas(sheet, {
+      scale: 2,
+      backgroundColor: '#ffffff',
+      useCORS: true,
+      allowTaint: false,
+      logging: false,
+      // 2) Convierte TODAS las <img> del clon a base64 (nunca contaminan)
+      onclone: function(clonedDoc){
+        const promesas = [];
+        clonedDoc.querySelectorAll('img').forEach(function(img){
+          if(img.src && img.src.indexOf('data:') !== 0){
+            promesas.push(aBase64(img.src).then(function(d){
+              img.src = d;
+            }).catch(function(){}));
+          }
+        });
+        return Promise.all(promesas);
+      }
+    });
   }).then(function(canvas){
     const imgData = canvas.toDataURL('image/png');
     restaurar();
@@ -1125,11 +1128,7 @@ function exportPDFDesdeBoton(btn){
   }).catch(function(err){
     restaurar();
     console.error(err);
-    if(location.protocol === 'file:'){
-      alert('⚠️ Estás abriendo el archivo directamente desde tu computadora. Sube los cambios a GitHub y prueba el botón PDF en tu sitio publicado.');
-    } else {
-      alert('Error al generar el PDF: '+err.message);
-    }
+    alert('Error al generar el PDF: '+err.message);
   });
 }
 function limpiar(viewId){
