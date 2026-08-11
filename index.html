@@ -444,6 +444,96 @@
   width:60px;height:60px;
   background:url("logolan.png") no-repeat center/contain;
   pointer-events:none}
+  /* ============================================================
+   OPTIMIZACIÓN MÓVIL FINAL (debe ir al final del CSS)
+   ============================================================ */
+@media (max-width:900px){
+  body{padding:12px 6px}
+  html,body{overflow-x:hidden}
+  .toolbar{position:static}
+  /* Portada y secciones */
+  .home{padding:18px 14px 0}
+  .home-top{grid-template-columns:1fr}
+  .home-logo{width:120px}
+  .home-title{font-size:42px}
+  .home-kicker{font-size:20px}
+  .home-feats{grid-template-columns:1fr 1fr;gap:14px}
+  .feat + .feat{border-left:none}
+  .home-basket{max-width:420px;margin:0 auto}
+  .home-bottom-logo img{width:80px}
+  .folder-card{grid-template-columns:1fr;padding:14px}
+  .fc-left svg{max-width:320px;margin:0 auto}
+  .tej-bar{flex-wrap:wrap}
+  .tej-logo{width:120px}
+  .tej-main{grid-template-columns:1fr}
+  .tej-main .home-basket{max-width:420px;margin:0 auto}
+  .rutas{grid-template-columns:1fr}
+  .ruta{grid-template-columns:110px 1fr}
+  .map-head{grid-template-columns:1fr}
+  .map-head .map-folder{max-width:190px;margin:0 auto}
+  .map-head .home-basket{max-width:420px;margin:0 auto}
+  .map-cards{grid-template-columns:1fr}
+  .tools7{grid-template-columns:1fr 1fr}
+  .tools7b{grid-template-columns:1fr 1fr;max-width:100%}
+  .sheet{max-width:100%}
+  /* Encabezados de herramientas: una columna y logos pequeños */
+  #view-t1 header,#view-t2 header,#view-t4 header,#view-t5 header,#view-t6 header{
+    grid-template-columns:1fr !important;justify-items:center;gap:6px;padding:14px 12px}
+  #view-t1 .t1-left-logo,#view-t2 .t2-left-logo,#view-t4 .t4-left-logo,#view-t5 .t5-left-logo,#view-t6 .t6-left-logo{
+    display:flex;justify-content:center;width:100%}
+  #view-t1 .t1-left-logo img,#view-t2 .t2-left-logo img,#view-t4 .t4-left-logo img,#view-t5 .t5-left-logo img,#view-t6 .t6-left-logo img{
+    width:110px !important;margin:0 !important}
+  /* Logos LAN de abajo más pequeños en móvil */
+  #view-t1 .sheet::after,#view-t2 .sheet::after,#view-t4 .sheet::after,#view-t5 .sheet::after,#view-t6 .sheet::after{
+    width:90px;height:40px}
+  /* Herramienta 1 */
+  #view-t1 .antes{flex-direction:column;align-items:flex-start}
+  #view-t1 .ngrid{grid-template-columns:1fr}
+  #view-t1 .nbottom{grid-template-columns:1fr}
+  /* Herramienta 2: tabla deslizable */
+  #view-t2 .t2wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #view-t2 .t2{min-width:640px}
+  /* Herramienta 4: tablas deslizables */
+  #view-t4 .t4wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #view-t4 table{min-width:760px}
+  #view-t4 .seg-head{flex-direction:column;align-items:flex-start}
+  #view-t4 .seg-leaf{display:none}
+  #view-t4 .estados{flex-direction:column;align-items:flex-start}
+  #view-t4 .est-note{margin-left:0;max-width:100%}
+  /* Herramienta 5 */
+  #view-t5 .grid5{grid-template-columns:1fr}
+  #view-t5 .q1 .qrow,#view-t5 .q1 .dashbox{margin-left:0}
+  #view-t5 footer{flex-direction:column;align-items:flex-start}
+  /* Herramienta 6 */
+  #view-t6 .grid{grid-template-columns:1fr}
+  #view-t6 .card.right .lines{margin:0 12px 4px 44px}
+  #view-t6 .decisions{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #view-t6 table{min-width:520px}
+  #view-t6 footer{flex-direction:column;align-items:flex-start}
+  /* Video y hoja de cálculo */
+  .video-head{flex-direction:column;align-items:flex-start;gap:8px}
+  .autoeval-frame{height:70vh;min-height:420px}
+}
+@media (max-width:480px){
+  .home-title{font-size:32px}
+  .home-kicker{font-size:17px}
+  .home-feats{grid-template-columns:1fr}
+  .home-bottom-logo img{width:70px}
+  .tools7{grid-template-columns:1fr}
+  .tools7b{grid-template-columns:1fr}
+  .ruta{grid-template-columns:1fr}
+  .ruta-folder{max-width:160px;margin:0 auto}
+  .title-logo{width:46px}
+  #view-t1 h1{font-size:20px}
+  #view-t2 h1{font-size:22px}
+  #view-t4 h1{font-size:19px}
+  #view-t5 h1{font-size:22px}
+  #view-t6 h1{font-size:24px}
+  .nstrip{font-size:10px;gap:8px;flex-wrap:wrap}
+  .t7 .t7t b{font-size:14px}
+  #view-t1 .t1-left-logo img,#view-t2 .t2-left-logo img,#view-t4 .t4-left-logo img,#view-t5 .t5-left-logo img,#view-t6 .t6-left-logo img{
+    width:90px !important}
+}
   @media print{
     /* Fuerza la impresión de colores e imágenes de fondo */
     *,*::before,*::after{
