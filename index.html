@@ -547,6 +547,14 @@
   #view-tejido .ruta{grid-template-columns:1fr}
   #view-tejido .ruta-folder{max-width:160px;margin:0 auto}
 }
+/* ---------- BOTÓN AGREGAR PREGUNTA (HERRAMIENTA 2) ---------- */
+.btn-agregar-fila{
+  display:block;margin:16px auto 0;padding:10px 26px;
+  background:#2e5e2a;color:#fff;border:none;border-radius:24px;
+  font-family:'Oswald',sans-serif;font-size:15px;letter-spacing:1px;cursor:pointer;
+  transition:background .2s, transform .15s;
+}
+.btn-agregar-fila:hover{background:#3a7d44;transform:translateY(-1px)}
   @media print{
     /* Fuerza la impresión de colores e imágenes de fondo */
     *,*::before,*::after{
@@ -1051,6 +1059,10 @@ function exportPDFDesdeBoton(btn){
   const textoOriginal = btn.innerHTML;
   btn.innerHTML = '⏳ Generando PDF...';
 
+  function urlDe(txt){
+    const m = txt.match(/url\(["']?([^"')]+)["']?\)/);
+    return m ? m[1] : null;
+  }
   function aBase64(url){
     return fetch(url).then(function(r){ return r.blob(); }).then(function(b){
       return new Promise(function(res){
@@ -1060,51 +1072,44 @@ function exportPDFDesdeBoton(btn){
       });
     });
   }
-
-  // 1) Convierte el logo LAN (fondo ::after) a base64 antes de capturar
-  const estilosTemp = document.createElement('style');
-  estilosTemp.id = 'estilosBase64Temp';
-  const tareas = [];
-  ['t1','t2','t4','t5','t6'].forEach(function(v){
-    const s = document.querySelector('#view-'+v+' .sheet');
-    if(!s) return;
-    const bg = getComputedStyle(s,'::after').backgroundImage;
-    const m = bg ? bg.match(/url\(["']?([^"')]+)["']?\)/) : null;
-    const u = m ? m[1] : null;
-    if(!u || u.indexOf('data:') === 0) return;
-    tareas.push(aBase64(u).then(function(d){
-      estilosTemp.textContent += '#view-'+v+' .sheet::after{background-image:url("'+d+'") !important}\n';
-    }).catch(function(){}));
-  });
-
   function restaurar(){
+    sheet.querySelectorAll('img[data-src-original]').forEach(function(img){
+      img.src = img.getAttribute('data-src-original');
+      img.removeAttribute('data-src-original');
+    });
     const st = document.getElementById('estilosBase64Temp');
     if(st) st.remove();
     btn.disabled = false;
     btn.innerHTML = textoOriginal;
   }
 
+  // 1) Convertir todas las <img> de la hoja a base64
+  const tareas = Array.prototype.slice.call(sheet.querySelectorAll('img')).map(function(img){
+    if(!img.src || img.src.indexOf('data:') === 0) return Promise.resolve();
+    return aBase64(img.src).then(function(d){
+      img.setAttribute('data-src-original', img.src);
+      img.src = d;
+    }).catch(function(){});
+  });
+
+  // 2) Convertir el logo LAN (fondo ::after) a base64
+  const estilosTemp = document.createElement('style');
+  estilosTemp.id = 'estilosBase64Temp';
+  ['t1','t2','t4','t5','t6'].forEach(function(v){
+    const s = document.querySelector('#view-'+v+' .sheet');
+    if(!s) return;
+    const bg = getComputedStyle(s,'::after').backgroundImage;
+    const u = bg ? urlDe(bg) : null;
+    if(!u || u.indexOf('data:') === 0) return;
+    tareas.push(aBase64(u).then(function(d){
+      estilosTemp.textContent += '#view-'+v+' .sheet::after{background-image:url("'+d+'") !important}\n';
+    }).catch(function(){}));
+  });
+
+  // 3) Capturar y generar el PDF
   Promise.all(tareas).then(function(){
     if(estilosTemp.textContent) document.head.appendChild(estilosTemp);
-    return html2canvas(sheet, {
-      scale: 2,
-      backgroundColor: '#ffffff',
-      useCORS: true,
-      allowTaint: false,
-      logging: false,
-      // 2) Convierte TODAS las <img> del clon a base64 (nunca contaminan)
-      onclone: function(clonedDoc){
-        const promesas = [];
-        clonedDoc.querySelectorAll('img').forEach(function(img){
-          if(img.src && img.src.indexOf('data:') !== 0){
-            promesas.push(aBase64(img.src).then(function(d){
-              img.src = d;
-            }).catch(function(){}));
-          }
-        });
-        return Promise.all(promesas);
-      }
-    });
+    return html2canvas(sheet,{scale:2,backgroundColor:'#ffffff',logging:false});
   }).then(function(canvas){
     const imgData = canvas.toDataURL('image/png');
     restaurar();
@@ -1128,9 +1133,43 @@ function exportPDFDesdeBoton(btn){
   }).catch(function(err){
     restaurar();
     console.error(err);
-    alert('Error al generar el PDF: '+err.message);
+    if(location.protocol === 'file:'){
+      alert('⚠️ Estás abriendo el archivo directamente desde tu computadora. Sube los cambios a GitHub y prueba el botón PDF en tu sitio publicado.');
+    } else {
+      alert('Error al generar el PDF: '+err.message);
+    }
   });
 }
+function agregarPreguntaH2(){
+  const t2 = document.querySelector('#view-t2 .t2');
+  if(!t2){ alert('No se encontró la tabla de preguntas'); return; }
+  const filas = Array.from(t2.querySelectorAll('.row'));
+  if(filas.length < 3){ alert('No se encontró la estructura de filas'); return; }
+  // Las últimas 3 casillas forman la última pregunta completa
+  const ultimas3 = filas.slice(filas.length - 3);
+  let referencia = filas[filas.length - 1];
+  ultimas3.forEach(function(celda){
+    const nueva = celda.cloneNode(true);
+    nueva.querySelectorAll('[contenteditable]').forEach(c=>c.innerHTML='');
+    nueva.querySelectorAll('input[type=checkbox]').forEach(c=>c.checked=false);
+    nueva.querySelectorAll('select').forEach(s=>{s.value='';s.setAttribute('data-v','');});
+    referencia.insertAdjacentElement('afterend', nueva);
+    referencia = nueva;
+  });
+}
+// Crea el botón automáticamente debajo de la tabla
+(function(){
+  const wrap = document.querySelector('#view-t2 .t2wrap');
+  if(wrap && !document.getElementById('btnAgregarH2')){
+    const b = document.createElement('button');
+    b.id = 'btnAgregarH2';
+    b.type = 'button';
+    b.className = 'btn-agregar-fila';
+    b.innerHTML = '＋ Agregar otra pregunta';
+    b.addEventListener('click', agregarPreguntaH2);
+    wrap.insertAdjacentElement('afterend', b);
+  }
+})();
 function limpiar(viewId){
   if(!confirm('¿Borrar todo lo escrito en esta herramienta?'))return;
   const v=document.getElementById(viewId);
