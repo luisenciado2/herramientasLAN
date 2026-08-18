@@ -555,7 +555,16 @@
   transition:background .2s, transform .15s;
 }
 .btn-agregar-fila:hover{background:#3a7d44;transform:translateY(-1px)}
-  @media print{
+ /* ---------- HERRAMIENTA 7: JAMOVI (VIDEOS) ---------- */
+#view-t7 .j7-head{text-align:center;padding:26px 20px 6px}
+#view-t7 .j7-head .banner{display:inline-block;background:#2e5e2a;color:#fff;font-family:'Oswald',sans-serif;letter-spacing:2px;padding:4px 16px;border-radius:14px;font-size:13px}
+#view-t7 .j7-head h1{font-family:'Oswald',sans-serif;color:#2e5e2a;font-size:34px;margin:10px 0 4px}
+#view-t7 .j7-head p{color:#5a5a52;font-size:14px;max-width:640px;margin:0 auto}
+#view-t7 .jamovi-videos{max-width:900px;margin:0 auto;padding:16px 20px 34px;display:flex;flex-direction:column;gap:26px}
+#view-t7 .jv-block h2{font-family:'Oswald',sans-serif;color:#2e5e2a;font-size:17px;letter-spacing:.5px;margin:0 0 8px}
+#view-t7 video{width:100%;display:block;aspect-ratio:16/9;height:auto;object-fit:contain;background:#000;border-radius:12px;border:2.5px solid #2e5e2a;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media (max-width:900px){#view-t7 .j7-head h1{font-size:26px}}
+ @media print{
     /* Fuerza la impresión de colores e imágenes de fondo */
     *,*::before,*::after{
       -webkit-print-color-adjust:exact !important;
@@ -742,11 +751,34 @@
     <div class="tools7b">
       <section class="t7" style="--tc:#5e7a1f"><div class="h7"><span class="n7">5</span><div class="t7t">Herramienta 5:<b>Comprendiendo nuestros resultados</b></div></div><div class="t7icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M14 50 V32 M24 50 V22 M34 50 V38"/><circle cx="42" cy="40" r="11"/><path d="M50 48 l8 8"/></svg></div><p>Organizamos y analizamos la información para entender qué nos dicen los datos.</p><button class="t7btn" onclick="showView('t5')">Ver herramienta</button><button class="t7dl" onclick="alert('📥 Descarga disponible próximamente.')">⬇ Descargar</button></section>
       <section class="t7" style="--tc:#d99a1f"><div class="h7"><span class="n7">6</span><div class="t7t">Herramienta 6:<b>Del dato a la acción</b></div></div><div class="t7icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><ellipse cx="32" cy="18" rx="9" ry="11"/><path d="M32 29 v6 M28 47 c0-4 3-6 6-6 M38 47 c0-4-3-6-6-6"/><path d="M32 16 l-2.5 3 a2.5 2.5 0 1 0 5 0 z" fill="currentColor"/><circle cx="20" cy="48" r="4"/><circle cx="44" cy="48" r="4"/><circle cx="32" cy="50" r="4"/></svg></div><p>Transformamos lo que aprendimos en decisiones, acciones y planes para fortalecer nuestro trabajo.</p><button class="t7btn" onclick="showView('t6')">Ver herramienta</button><button class="t7dl" onclick="alert('📥 Descarga disponible próximamente.')">⬇ Descargar</button></section>
-      <section class="t7" style="--tc:#1f7a6f"><div class="h7"><span class="n7">7</span><div class="t7t">Herramienta 7:<b>Un paso más allá Jamovi</b></div></div><div class="t7icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="14" width="32" height="24" rx="3"/><path d="M10 44 h44 l-5 -6 H15 z"/><text x="32" y="29" font-size="9" text-anchor="middle" fill="currentColor" stroke="none" font-family="Nunito" font-weight="bold">jamovi</text></svg></div><p>Usamos Jamovi para analizar la información de manera sencilla y obtener resultados que nos orienten mejor.</p><button class="t7btn" onclick="alert('🌱 Esta herramienta estará disponible próximamente.')">Ver herramienta</button><button class="t7dl" onclick="alert('📥 Descarga disponible próximamente.')">⬇ Descargar</button></section>
+      <section class="t7" style="--tc:#1f7a6f"><div class="h7"><span class="n7">7</span><div class="t7t">Herramienta 7:<b>Un paso más allá Jamovi</b></div></div><div class="t7icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="14" width="32" height="24" rx="3"/><path d="M10 44 h44 l-5 -6 H15 z"/><text x="32" y="29" font-size="9" text-anchor="middle" fill="currentColor" stroke="none" font-family="Nunito" font-weight="bold">jamovi</text></svg></div><p>Usamos Jamovi para analizar la información de manera sencilla y obtener resultados que nos orienten mejor.</p><button class="t7btn" onclick="showView('t7')">Ver herramienta</button><button class="t7dl" onclick="alert('📥 Descarga disponible próximamente.')">⬇ Descargar</button></section>
     </div>
     <div class="home-banner" style="max-width:none;margin:0 0 26px"><svg viewBox="0 0 40 110"><use href="#branch"/></svg><p>Estas herramientas son una invitación a conversar, escuchar diferentes voces y construir respuestas desde nuestras realidades. Úsalas, adáptalas y hazlas parte de tu camino.</p></div>
     <div class="home-diamonds dband"></div>
     <svg class="home-wave" viewBox="0 0 1250 110" preserveAspectRatio="none"><use href="#wave"/></svg>
+  </div>
+</div>
+<!-- ============ HERRAMIENTA 7: UN PASO MÁS ALLÁ (JAMOVI) ============ -->
+<div id="view-t7" class="view hidden">
+  <div class="toolbar">
+    <button class="tb-back" onclick="showView('mapeo')">⬅ Volver a Ruta de Mapeo</button>
+  </div>
+  <div class="sheet">
+    <div class="j7-head">
+      <span class="banner">HERRAMIENTA 7</span>
+      <h1>Un paso más allá: Jamovi</h1>
+      <p>Usamos Jamovi para analizar la información de manera sencilla y obtener resultados que nos orienten mejor. Mira los videos con tu equipo, paúsalos y repítelos las veces que lo necesiten.</p>
+    </div>
+    <section class="jamovi-videos">
+      <div class="jv-block">
+        <h2>🎬 Video 1 · Conociendo Jamovi paso a paso</h2>
+        <video controls preload="metadata" src="jamovi1.1.mp4"></video>
+      </div>
+      <div class="jv-block">
+        <h2>🎬 Video 2 · Analizando nuestra información</h2>
+        <video controls preload="metadata" src="jamovi2.mp4"></video>
+      </div>
+    </section>
   </div>
 </div>
 <!-- HERRAMIENTA 1 -->
